@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="m-0" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>My Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./output.css">
+  <script type="text/javascript" src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.1.0/iconify.min.js" integrity="sha512-m+FSPcVQiYajBX0nqua3ZtlcMokGwe8cXl7JBQ51xYO+E9aMJm+vlbxnbLuhrDcezHB67T6gK0YuGwuXfl+yrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet"> 
+</head>
+<body class="m-0" style="height: 200vh; font-family: 'Montserrat', sans-serif;">
+  <!-- Responsive navigation bar, side bar while on mobile view -->
+  <nav class="z-30 flex justify-between items-center fixed top-0 w-full h-20 bg-zinc-700 text-zinc-400">
+    <a id="menu-btn" href="#notop" class="ml-5 w-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-5 h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    <div id="side-nav" class="flex text-2xl transition-all absolute mt-20 top-0  w-0 overflow-hidden h-screen">
+      <hr>
+      <ul class="w-2/3 h-screen bg-zinc-700">
+        <!-- Home menu entry-->
+        <li class="ml-5  pt-2"><a class="close-side-nav" href="#home">Home</a>
+          <hr class="mr-5 my-2">
+        </li>
+
+        <!-- Projects menu entry-->
+        <li class="ml-5 group ">
+          <span>Projects</span>
+          <div class="text-xl absolute bg-zinc-700 border border-zinc-400 rounded-md invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all" id="dropdown-menu">
+            <ul>
+              <li class="p-3">
+                <span class=" inline iconify" data-icon="simple-icons:freecodecamp"></span>
+                <a class="close-side-nav" href="#free-code-camp-projects">freeCodeCamp Projects</a>
+                <hr class="mt-3">
+              </li>
+              <li class="px-3 pb-3">
+                <span class=" inline iconify-inline" data-icon="simple-icons:frontendmentor"></span>
+                <a class="close-side-nav" href="#frontendmentor-projects">Frontendmentor Projects</a>
+              </li>
+            </ul>
+            
+          </div>
+          <hr class="mr-5 my-2">
+        </li>
+
+        <!-- About menu entry-->
+        <li class="ml-5"><a class="close-side-nav" href="#about">About</a></li>
+      </ul>
+      <div id="side-nav-overlay" class="p-3 text-right bg-zinc-900/75 w-1/3 h-full">
+        <span class="cursor-pointer text-5xl close-side-nav inline iconify" data-icon="ep:close"></span>
+        
+      </div>
+    </div>
+  </nav>
+  <a id="home" class="block h-20" data-hs-anchor="true" ></a>
+
+  <!-- Header -->
+  <header class="flex flex-col overflow-hidden bg-zinc-700 " style="height: calc(100vh - 80px);">
+    <div class="flex h-64 w-screen bg-white shadow">
+      <img class="block  h-full w-44 object-cover object-left-top  saturate-50" src="https://docs.google.com/uc?export=download&id=1M22wJ7-I_xlKzNR4C-bMGcT5Fv52stMh" alt="">
+      <div class=" bg-white text-right w-full h-full py-6 pr-3  text-zinc-500 skew-x-12 origin-bottom-left">
+        <div class="-skew-x-12">
+          <p class="text-5xl font-black">Portfolio</p>
+          <p class="text-3xl">Adrian Burgos</p>
+          <p class="text-xl">Web Development</p>
+          <p class="text-base">...a coder career</p>
+        </div>
+      </div>
+      <!-- <div class="bg-white absolute h-54 w-96 left-5 top-0 ml-7 " style="transform: rotate(75deg);"></div> -->
+    </div>
+    <div class="flex flex-col grow">
+      
+      <div class="h-full w-full bg-gradient-to-r from-zinc-400">
+        <img class="opacity-5 h-full w-full object-cover" src="./images/code.jpg" alt="">
+      </div>
+      <div class="w-full bg-zinc-700 text-right  text-zinc-400 font-bold py-10 pr-4">
+        <!-- <div class="absolute left-0 bg-zinc-500 -skew-x-12"> -->
+          <p><q>A dream does not become reality through magic; it takes sweat, determination, and hard work.</q></p>
+          <!-- <p><q>I'm a great believer in luck, and I find the harder I work, the more I have of it.</q></p> -->
+        <!-- </div> -->
+       
+      </div>
+    </div>
+  </header>
+  <main>
+
+  </main>  
+  <footer>
+
+  </footer>
+ 
+</body>
+</html>
+
