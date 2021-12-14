@@ -6,6 +6,7 @@ $(document).ready(function(){
     });
 
     $(".close-side-nav").click(function(){
-        $("#side-nav").css("width","0");
+        $(this).css("background","white")
+        // $("#side-nav").css("width","0");
     });
 });
