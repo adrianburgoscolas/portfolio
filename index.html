@@ -1,125 +1,615 @@
 <!DOCTYPE html>
 <html class="m-0 scroll-smooth" lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
   <title>My Portfolio</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="./output.css" />
   <script type="text/javascript" src="index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.1.0/iconify.min.js" integrity="sha512-m+FSPcVQiYajBX0nqua3ZtlcMokGwe8cXl7JBQ51xYO+E9aMJm+vlbxnbLuhrDcezHB67T6gK0YuGwuXfl+yrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.1.0/iconify.min.js"
+    integrity="sha512-m+FSPcVQiYajBX0nqua3ZtlcMokGwe8cXl7JBQ51xYO+E9aMJm+vlbxnbLuhrDcezHB67T6gK0YuGwuXfl+yrg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+    rel="stylesheet" />
 </head>
-<body class="relative" style="font-family: 'Montserrat', sans-serif;">
+
+<body class="bg-zinc-100" style="font-family: 'Montserrat Alternates', sans-serif">
   <!-- Responsive navigation bar, side bar while on mobile view -->
-  <nav class="fixed top-0 z-30 flex items-center justify-between w-full h-20 bg-zinc-700 text-zinc-400">
+  <nav class="
+        fixed
+        top-0
+        z-30
+        flex
+        items-center
+        justify-between
+        w-full
+        h-20
+        bg-zinc-700
+        text-zinc-400
+      ">
     <a id="menu-btn" href="#notop" class="w-10 ml-5">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </a>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    <div id="side-nav" class="absolute top-0 flex w-0 h-screen mt-20 overflow-hidden text-2xl transition-all border-t border-zinc-400">
-      
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mr-5" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+    </svg>
+    <div id="side-nav" class="
+          absolute
+          top-0
+          flex
+          w-0
+          h-screen
+          mt-20
+          overflow-hidden
+          text-2xl
+          transition-all
+          border-t border-zinc-400
+        ">
       <ul class="w-2/3 h-screen bg-zinc-700">
         <!-- Home menu entry-->
-        <li class="pt-2 ml-5"><a class="close-side-nav" href="#home">Home</a>
-          <hr class="my-2 mr-5">
+        <li class="pt-2 ml-5">
+          <a class="close-side-nav" href="#home">Home</a>
+          <hr class="my-2 mr-5" />
         </li>
-        <li class="ml-5"><a class="close-side-nav" href="#my-work">My Work!</a>
-          <hr class="my-2 mr-5">
+        <li class="ml-5">
+          <a class="close-side-nav" href="#my-work">My Work!</a>
+          <hr class="my-2 mr-5" />
         </li>
         <!-- Projects menu entry-->
-        <li class="ml-5 group ">
+        <li class="ml-5 group">
           <span>Projects</span>
-          <div class="absolute invisible text-xl transition-all border rounded-md opacity-0 bg-zinc-700 border-zinc-400 group-hover:visible group-hover:opacity-100" id="dropdown-menu">
+          <div class="
+                absolute
+                invisible
+                text-xl
+                transition-all
+                border
+                rounded-md
+                opacity-0
+                bg-zinc-700
+                border-zinc-400
+                group-hover:visible group-hover:opacity-100
+              " id="dropdown-menu">
             <ul>
               <li class="p-3">
                 <span class="inline iconify" data-icon="simple-icons:freecodecamp"></span>
-                <a class="close-side-nav" href="#free-code-camp-projects">freeCodeCamp Projects</a>
-                <hr class="mt-3">
+                <a class="close-side-nav" href="#free-code-camp-projects">FreeCodeCamp Projects</a>
+                <hr class="mt-3" />
               </li>
               <li class="px-3 pb-3">
                 <span class="inline iconify-inline" data-icon="simple-icons:frontendmentor"></span>
                 <a class="close-side-nav" href="#frontendmentor-projects">Frontendmentor Projects</a>
               </li>
             </ul>
-            
           </div>
-          <hr class="my-2 mr-5">
+          <hr class="my-2 mr-5" />
         </li>
 
         <!-- About menu entry-->
-        <li class="ml-5"><a class="close-side-nav" href="#about">About</a></li>
+        <li class="ml-5">
+          <a class="close-side-nav" href="#about">About</a>
+        </li>
       </ul>
       <div id="side-nav-overlay" class="w-1/3 h-full p-3 text-right bg-zinc-900/75">
         <span class="inline text-5xl cursor-pointer close-side-nav iconify" data-icon="ep:close"></span>
-        
       </div>
     </div>
   </nav>
-  <a id="home" class="block h-20" data-hs-anchor="true" ></a>
+  <a id="home" class="block h-20" data-hs-anchor="true"></a>
 
   <!-- Header -->
-  <header class="overflow-hidden flex flex-col bg-zinc-700 " style="height: calc(100vh - 80px);">
+  <header class="flex flex-col overflow-hidden bg-zinc-700 shadow-2xl" style="height: calc(100vh - 80px)">
     <div class="flex w-screen h-64 bg-white shadow shrink-0">
-      <img class="block object-cover object-left-top h-full w-44 saturate-50" src="https://docs.google.com/uc?export=download&id=1M22wJ7-I_xlKzNR4C-bMGcT5Fv52stMh" alt="">
-      <div class="w-full h-full py-6 pr-3 text-right origin-bottom-left skew-x-12 bg-white text-zinc-500">
+      <img class="block object-cover object-left-top h-full w-44"
+        src="https://docs.google.com/uc?export=download&id=1M22wJ7-I_xlKzNR4C-bMGcT5Fv52stMh" alt="" />
+      <div class="
+            w-full
+            h-full
+            py-6
+            pr-3
+            text-right
+            origin-bottom-left
+            skew-x-12
+            bg-white
+            text-zinc-500
+          ">
         <div class="-skew-x-12">
-          <p class="text-5xl font-black">Portfolio</p>
-          <p class="text-3xl">Adrian Burgos</p>
-          <p class="text-xl">Web Development</p>
-          <p class="text-base">...a coder career</p>
+          <div class="text-5xl font-black">Portfolio</div>
+          <div class="text-3xl">Adrian Burgos</div>
+          <div class="text-xl">Web Development</div>
+          <div class="text-base">...a coder career</div>
         </div>
       </div>
       <!-- <div class="absolute top-0 bg-white h-54 w-96 left-5 ml-7 " style="transform: rotate(75deg);"></div> -->
     </div>
     <div class="flex flex-col grow">
-      
-      <div class="relative w-full h-full bg-gradient-to-r from-zinc-400 grow overflow-hidden">
-        <img class="absolute object-cover w-full h-full opacity-5" src="./images/code.jpg" alt="">
+      <div class="
+            relative
+            w-full
+            h-full
+            overflow-hidden
+            bg-gradient-to-r
+            from-zinc-400
+            grow
+          ">
+        <img class="absolute object-cover w-full h-full opacity-5" src="./images/code.jpg" alt="" />
       </div>
-      <div class="w-full h-44 py-10 pr-4 font-bold text-right bg-zinc-700 text-zinc-400 " >
-        <p><q>A dream does not become reality through magic; it takes sweat, determination, and hard work.</q></p>
+      <div class="
+            relative
+            w-full
+            py-10
+            pr-4
+            font-bold
+            text-right
+            h-44
+            bg-zinc-700
+            text-zinc-400
+          ">
+        <p>
+          <q>A dream does not become reality through magic; it takes sweat,
+            determination, and hard work.</q>
+        </p>
+        <a class="absolute bottom-[80px]" id="my-work"></a>
       </div>
     </div>
   </header>
   <main>
-    <div class="relative">
-      <a class="absolute -top-20" id="my-work"></a>
-    </div>
-    <section style="height: calc(100vh - 80px);">
-      
-      <h2 class="text-5xl font-black text-zinc-600 text-center py-5">My Work!</h2>
-      <!-- carousel -->
-      
-      <div class="w-full  h-64 text-4xl relative overflow-hidden" style="box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);">
-        <div class="transition-all duration-[1500ms] bg-red-400 inset-0 w-full h-full absolute visible translate-x-0"><img src="./images/carousel/pic1.png" alt=""></div>
-        <div class="transition-all duration-[1500ms] bg-blue-400 inset-0 w-full h-full absolute visible next translate-x-full"><img src="./images/carousel/pic2.png" alt=""></div>
-        <div class="transition-all duration-[1500ms] bg-green-400 inset-0 w-full h-full absolute invisible -translate-x-full"><img src="./images/carousel/pic3.png" alt=""></div>
-        <div id="previous" class="z-20 flex justify-center items-center absolute inset-y-0 left-0 text-zinc-300 bg-zinc-700/25 "><span class="iconify" data-icon="dashicons:arrow-left-alt2"></span></div>
-        <div id="next" class="z-20 flex justify-center items-center absolute  inset-y-0 right-0 text-zinc-300 bg-zinc-700/25 "><span class="iconify" data-icon="dashicons:arrow-right-alt2"></span></div>
-        <!-- 
-        
-         -->
-        <!-- 
-         -->
-        
+    <!-- <div class="relative m-0"> -->
+
+    <!-- </div> -->
+    <section class="relative w-full pt-14">
+      <!-- my work header card -->
+      <div class="
+            w-4/5
+            p-10
+            mx-auto
+            mb-10
+            bg-green-300
+            rounded-lg
+            shadow-2xl
+            text-zinc-600
+            -rotate-3
+          ">
+        <h2 class="text-4xl font-black text-center text-zinc-600">
+          My Work!
+        </h2>
       </div>
-      <p class="p-5 text-justify">
-        I started at <a href="https://www.freecodecamp.org/learn/">freeCodeCamp.com</a>, a good resourse to initiate in this career so I will show you some of the projects had to finished to complete their certificates. I'm also completing <a href="https://www.frontendmentor.io/home" rel="">Frontendmentor</a>'s challenges to add some experiense and a good choise to increase your portfolio.
+      <!-- carousel -->
+
+      <div class="relative w-full h-64 overflow-hidden text-4xl mb-5"
+        style="box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4)">
+        <a class="absolute z-10 w-full h-full no-slide" href="#notop"></a>
+        <div class="
+              transition-all
+              duration-[1500ms]
+              bg-red-400
+              inset-0
+              w-full
+              h-full
+              absolute
+              visible
+              translate-x-0
+            ">
+          <img src="./images/carousel/pic1.png" alt="" />
+        </div>
+        <div class="
+              transition-all
+              duration-[1500ms]
+              bg-blue-400
+              inset-0
+              w-full
+              h-full
+              absolute
+              visible
+              next
+              translate-x-full
+            ">
+          <img src="./images/carousel/pic2.png" alt="" />
+        </div>
+        <div class="
+              transition-all
+              duration-[1500ms]
+              bg-green-400
+              inset-0
+              w-full
+              h-full
+              absolute
+              invisible
+              -translate-x-full
+            ">
+          <img src="./images/carousel/pic3.png" alt="" />
+        </div>
+        <div id="next" class="
+              absolute
+              inset-y-0
+              left-0
+              z-20
+              flex
+              items-center
+              justify-center
+              text-zinc-200
+              bg-zinc-700/25
+              no-slide
+            ">
+          <span class="iconify" data-icon="dashicons:arrow-left-alt2"></span>
+        </div>
+        <a id="previous" class="
+              absolute
+              inset-y-0
+              right-0
+              z-20
+              flex
+              items-center
+              justify-center
+              text-zinc-200
+              bg-zinc-700/25
+              no-slide
+            "><span class="iconify" data-icon="dashicons:arrow-right-alt2"></span></a>
+      </div>
+      <div class="p-5 font-medium">
+        <p class="pl-2 text-justify border-l-4 border-solid border-l-green-300">
+          I get started my web develoment lessons at
+          <a class="font-bold text-zinc-700" href="https://www.freecodecamp.org/learn/">FreeCodeCamp</a>
+          , then moved to
+          <a class="font-bold text-zinc-700" href="https://www.frontendmentor.io/home" rel="noopener noreferrer"
+            target="_blank">Frontendmentor</a>.
+        </p>
+      </div>
+      <p class="px-5 font-normal text-justify">
+        FreeCodeCamp is a good resourse to begin in this career so I will show
+        you some of the projects had to finished to complete their
+        certificates. I'm also completing Frontendmentor's challenges to add
+        some experiense and a good choise to increase your portfolio.
       </p>
+      <a class="absolute bottom-[80px]" id="free-code-camp-projects"></a>
     </section>
-   
-  </main>  
-  <footer>
+    <section class="pt-14">
+      <!-- freeCodeCamp header card -->
+      <div class="
+            w-4/5
+            p-10
+            mx-auto
+            mb-5
+            rounded-lg
+            shadow-2xl
+            text-zinc-600
+            bg-rose-300
+            rotate-3
+          ">
+        <h2 class="text-2xl font-black text-left">
+          FreeCodeCamp Projects
+          <span class="inline iconify" data-icon="simple-icons:freecodecamp"></span>
+        </h2>
+      </div>
+      <div class="p-5 font-medium mb-10">
+        <p class="
+              text-justify
+              pl-2
+              text-justify
+              border-l-4 border-solid border-l-rose-300
+            ">
+          Here you are going to find some of the project I've finish to
+          complete the
+          <a class="font-bold text-zinc-700" href="https://www.freecodecamp.org/learn/">FreeCodeCamp</a>
+          certifications.
+        </p>
+      </div>
+      <!-- freeCodeCamp projects card grid -->
+      <div class="place-items-center grid grid-cols-1 gap-10">
 
-  </footer>
- 
+        <!-- chales darwin page card -->
+        <a href="https://codepen.io/Adrianburgoscolas/full/ExXEgjG" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-2
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[410px] -top-[2px] absolute z-0"
+                src="https://docs.google.com/uc?export=download&id=1goGSjw2Bla0WblUcp2YqCDw58CCwK3II"
+                alt="My first web page project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                My first web page!
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                I include this one because it was my first web page, it was
+                great when I completed it
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- Landing page card -->
+        <a href="https://codepen.io/Adrianburgoscolas/full/XWgExdW" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-3
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[410px] -top-[2px] z-0 "
+                src="https://docs.google.com/uc?export=download&id=1P8xf7VeS4nf1Z3yupTRpZaM-xYb1Oztr"
+                alt="A landing page project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                A landing page
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                One of my early projects, a responsive static product landing page
+              </p>
+            </div>
+
+          </div>
+        </a>
+        <!-- Random quote machine card -->
+        <a href="https://codepen.io/Adrianburgoscolas/full/vYJGjKM" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-1
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[385px] -top-20 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1_xFt7DireUCKs0X7398l2D1QNgry_RHD"
+                alt="Automatic quote machine project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                Automatic quote machine
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                In this one I started to add some JavaScript to automate and style this page
+              </p>
+            </div>
+
+          </div>
+        </a>
+        <!-- Markdown Previewer card-->
+        <a href="https://codepen.io/Adrianburgoscolas/full/OJjXwBr" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-2
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[385px] top-0 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1Rf8jY4NULMS8vfKsonS8V4xLA6nx_CW9"
+                alt="Markdown Previewer project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                Markdown Previewer
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                Used React in this project because by that time I was learning it
+              </p>
+            </div>
+
+          </div>
+        </a>
+        <!-- Drum Machine card-->
+        <a href="https://codepen.io/Adrianburgoscolas/full/qBXqaQo" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-3
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[385px] -top-14 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1CoTDjaf8JHS9VU_f0aWK50omVjiY0bJA"
+                alt="Drum Machine project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                Drum Machine
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                A lot of interaction in this project, playing with sounds and keyboard
+              </p>
+            </div>
+
+          </div>
+        </a>
+         <!-- JavaScript Calculator card-->
+         <a href="https://adrianburgoscolas.github.io/my-react-app/" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-1
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[385px] -top-24 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1uBwRRVdlmkneqkTU5k71PWHPNPeEhOn6"
+                alt="JavaScript Calculator project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                JavaScript Calc
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                A simple calculator web app using JavaScript
+              </p>
+            </div>
+
+          </div>
+        </a>
+        <!-- 25 + 5 Clock card-->
+        <a href="https://adrianburgoscolas.github.io/25-plus-5-clock/" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-1
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[380px] -top-10 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1uWrEowdYtGUsiNXUpYnbw6FIOA93ANmk"
+                alt="25 + 5 Clock project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                25 + 5 Clock
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                25 + 5 Clock, a timer...
+              </p>
+            </div>
+
+          </div>
+        </a>
+        <!-- visualize data with a bar chart card-->
+        <a href="https://adrianburgoscolas.github.io/visualize-data-with-a-bar-chart/" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-2
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[380px] -top-20 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1aOztzyWmhEaxTfcIu0CGYo0PLdDiEEm3"
+                alt="visualize data with a bar chart project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                Bar chart component
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                Data visualisation with a bar chart
+              </p>
+            </div>
+
+          </div>
+        </a>
+        <!-- Visualize Data with a Scatterplot Graph card-->
+        <a href="https://adrianburgoscolas.github.io/visualize-data-with-a-scatterplot-graph/" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-3
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[280px] -top-10 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=14o064eRepgZQEicUPwAzaRaDQoZgMgkM"
+                alt="Visualize Data with a Scatterplot Graph project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                Scatterplot Graph component
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                Data visualisation with a Scatterplot Graph
+              </p>
+            </div>
+
+          </div>
+        </a>
+        <!-- Visualize Data with a Heat Map card-->
+        <a href="https://adrianburgoscolas.github.io/Visualize-Data-with-a-Heat-Map/" target="_blank" rel="noopener noreferrer">
+          <div class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-3
+              transition-all
+              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
+            ">
+
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img class="object-cover w-full h-[320px] -top-10  z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1QzipWGFKkMq9IW_IaTiSTlrwPAFISvt9"
+                alt="Visualize Data with a Heat Map project" />
+            </div>
+            <div class="bg-white z-10">
+              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
+                Heat Map component
+              </h3>
+              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+                Data visualisation with a Heat Map
+              </p>
+            </div>
+
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
 </body>
-</html>
 
+</html>
