@@ -1,3 +1,7 @@
+var scroll = new SmoothScroll('a[href*="#"]',{
+    speed: 500,
+	speedAsDuration: true
+});
 $(document).ready(function(){
 
     let slide = true;
@@ -74,4 +78,5 @@ $(document).ready(function(){
         
         dropdown(dropdownMenu);
     });
+    
 });
