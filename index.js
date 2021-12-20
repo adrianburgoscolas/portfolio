@@ -58,4 +58,20 @@ $(document).ready(function(){
         clearInterval(interval);
         clearTimeout(timer);
     })
+    let dropdownMenu = false;
+    function dropdown(menu){
+        menu?$("#dropdown-menu").css({"opacity":"1","visibility":"visible"}):$("#dropdown-menu").css({"opacity":"0","visibility":"hidden"});
+        menu?$("#dropdown-arrow").addClass("rotate-180"):$("#dropdown-arrow").removeClass("rotate-180")
+    }
+    $("li.project-dropdown").click(function(){
+        dropdownMenu=!dropdownMenu;
+        
+        dropdown(dropdownMenu);
+
+    });
+    $(".close-dropdown").click(function(){
+        dropdownMenu=false;
+        
+        dropdown(dropdownMenu);
+    });
 });

@@ -423,7 +423,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.translate-x-0, .translate-x-full, .-translate-x-full, .-rotate-3, .rotate-3, .-rotate-2, .-rotate-1, .rotate-2, .rotate-1, .skew-x-12, .-skew-x-12, .transform, .lg\:hover\:rotate-0, .lg\:hover\:scale-\[1\.1\] {
+.translate-x-0, .translate-x-full, .-translate-x-full, .-rotate-3, .rotate-3, .-rotate-2, .-rotate-1, .rotate-2, .rotate-1, .rotate-180, .skew-x-12, .-skew-x-12, .transform, .lg\:hover\:rotate-0, .lg\:hover\:scale-\[1\.1\] {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -587,6 +587,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -642,6 +647,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-20 {
@@ -837,6 +846,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: var(--tw-transform);
 }
 
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: var(--tw-transform);
+}
+
 .skew-x-12 {
   --tw-skew-x: 12deg;
   transform: var(--tw-transform);
@@ -893,6 +907,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .overflow-hidden {
@@ -1124,6 +1142,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.5rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1142,10 +1164,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -1266,10 +1284,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.05;
 }
 
-.bg-blend-lighten {
-  background-blend-mode: lighten;
-}
-
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -1300,6 +1314,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 p{
   font-family: sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+main::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-position: center;
+  opacity: 0.1;
+  background-image: url('https://docs.google.com/uc?export=download&id=19QXkNtM-2yKUySn2dgbFw8Ne5Qu7oA9O');
 }
 
 .group:hover .group-hover\:visible {
