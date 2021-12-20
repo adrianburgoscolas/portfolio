@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html class="m-0 scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>My Portfolio</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./output.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.1.0/iconify.min.js"
+      integrity="sha512-m+FSPcVQiYajBX0nqua3ZtlcMokGwe8cXl7JBQ51xYO+E9aMJm+vlbxnbLuhrDcezHB67T6gK0YuGwuXfl+yrg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
-  <title>My Portfolio</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="./output.css" />
-  <script type="text/javascript" src="index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.1.0/iconify.min.js"
-    integrity="sha512-m+FSPcVQiYajBX0nqua3ZtlcMokGwe8cXl7JBQ51xYO+E9aMJm+vlbxnbLuhrDcezHB67T6gK0YuGwuXfl+yrg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body class="bg-zinc-100" style="font-family: 'Montserrat Alternates', sans-serif">
-  <!-- Responsive navigation bar, side bar while on mobile view -->
-  <nav class="
+  <body
+    class="bg-zinc-100"
+    style="font-family: 'Montserrat Alternates', sans-serif"
+  >
+    <!-- Responsive navigation bar, side bar while on mobile view -->
+    <nav
+      class="
         fixed
         top-0
         z-30
@@ -32,17 +42,42 @@
         h-20
         bg-zinc-700
         text-zinc-400
-      ">
-    <a id="menu-btn" href="#notop" class="w-10 ml-5">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        shadow-2xl
+      "
+    >
+      <a id="menu-btn" href="#notop" class="w-10 ml-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-10 h-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-10 h-10 mr-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+        />
       </svg>
-    </a>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mr-5" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-    </svg>
-    <div id="side-nav" class="
+      <div
+        id="side-nav"
+        class="
           absolute
           top-0
           flex
@@ -53,21 +88,23 @@
           text-2xl
           transition-all
           border-t border-zinc-400
-        ">
-      <ul class="w-2/3 h-screen bg-zinc-700">
-        <!-- Home menu entry-->
-        <li class="pt-2 ml-5">
-          <a class="close-side-nav" href="#home">Home</a>
-          <hr class="my-2 mr-5" />
-        </li>
-        <li class="ml-5">
-          <a class="close-side-nav" href="#my-work">My Work!</a>
-          <hr class="my-2 mr-5" />
-        </li>
-        <!-- Projects menu entry-->
-        <li class="ml-5 group">
-          <span>Projects</span>
-          <div class="
+        "
+      >
+        <ul class="w-2/3 h-screen bg-zinc-700">
+          <!-- Home menu entry-->
+          <li class="pt-2 ml-5">
+            <a class="close-side-nav" href="#home">Home</a>
+            <hr class="my-2 mr-5" />
+          </li>
+          <li class="ml-5">
+            <a class="close-side-nav" href="#my-work">My Work!</a>
+            <hr class="my-2 mr-5" />
+          </li>
+          <!-- Projects menu entry-->
+          <li class="ml-5 group">
+            <span>Projects</span>
+            <div
+              class="
                 absolute
                 invisible
                 text-xl
@@ -78,40 +115,70 @@
                 bg-zinc-700
                 border-zinc-400
                 group-hover:visible group-hover:opacity-100
-              " id="dropdown-menu">
-            <ul>
-              <li class="p-3">
-                <span class="inline iconify" data-icon="simple-icons:freecodecamp"></span>
-                <a class="close-side-nav" href="#free-code-camp-projects">FreeCodeCamp Projects</a>
-                <hr class="mt-3" />
-              </li>
-              <li class="px-3 pb-3">
-                <span class="inline iconify-inline" data-icon="simple-icons:frontendmentor"></span>
-                <a class="close-side-nav" href="#frontendmentor-projects">Frontendmentor Projects</a>
-              </li>
-            </ul>
-          </div>
-          <hr class="my-2 mr-5" />
-        </li>
+              "
+              id="dropdown-menu"
+            >
+              <ul>
+                <li class="p-3">
+                  <span
+                    class="inline iconify"
+                    data-icon="simple-icons:freecodecamp"
+                  ></span>
+                  <a class="close-side-nav" href="#free-code-camp-projects"
+                    >FreeCodeCamp Projects</a
+                  >
+                  <hr class="mt-3" />
+                </li>
+                <li class="px-3 pb-3">
+                  <span
+                    class="inline iconify-inline"
+                    data-icon="simple-icons:frontendmentor"
+                  ></span>
+                  <a class="close-side-nav" href="#frontendmentor-projects"
+                    >Frontend Mentor Projects</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <hr class="my-2 mr-5" />
+          </li>
 
-        <!-- About menu entry-->
-        <li class="ml-5">
-          <a class="close-side-nav" href="#about">About</a>
-        </li>
-      </ul>
-      <div id="side-nav-overlay" class="w-1/3 h-full p-3 text-right bg-zinc-900/75">
-        <span class="inline text-5xl cursor-pointer close-side-nav iconify" data-icon="ep:close"></span>
+          <!-- About menu entry-->
+          <li class="ml-5">
+            <a class="close-side-nav" href="#about">About</a>
+            <hr class="my-2 mr-5" />
+          </li>
+           <!-- Contact menu entry-->
+           <li class="ml-5">
+            <a class="close-side-nav" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div
+          id="side-nav-overlay"
+          class="w-1/3 h-full p-3 text-right bg-zinc-900/75"
+        >
+          <span
+            class="inline text-5xl cursor-pointer close-side-nav iconify"
+            data-icon="ep:close"
+          ></span>
+        </div>
       </div>
-    </div>
-  </nav>
-  <a id="home" class="block h-20" data-hs-anchor="true"></a>
+    </nav>
+    <a id="home" class="block h-20" data-hs-anchor="true"></a>
 
-  <!-- Header -->
-  <header class="flex flex-col overflow-hidden bg-zinc-700 shadow-2xl" style="height: calc(100vh - 80px)">
-    <div class="flex w-screen h-64 bg-white shadow shrink-0">
-      <img class="block object-cover object-left-top h-full w-44"
-        src="https://docs.google.com/uc?export=download&id=1M22wJ7-I_xlKzNR4C-bMGcT5Fv52stMh" alt="" />
-      <div class="
+    <!-- Header -->
+    <header
+      class="flex flex-col overflow-hidden bg-zinc-700 shadow-2xl"
+      style="height: calc(100vh - 80px); min-height: 587px"
+    >
+      <div class="flex w-screen h-64 bg-white shadow shrink-0">
+        <img
+          class="block object-cover object-left-top h-full w-44"
+          src="https://docs.google.com/uc?export=download&id=1M22wJ7-I_xlKzNR4C-bMGcT5Fv52stMh"
+          alt=""
+        />
+        <div
+          class="
             w-full
             h-full
             py-6
@@ -121,18 +188,20 @@
             skew-x-12
             bg-white
             text-zinc-500
-          ">
-        <div class="-skew-x-12">
-          <div class="text-5xl font-black">Portfolio</div>
-          <div class="text-3xl">Adrian Burgos</div>
-          <div class="text-xl">Web Development</div>
-          <div class="text-base">...a coder career</div>
+          "
+        >
+          <div class="-skew-x-12">
+            <div class="text-5xl font-black">Portfolio</div>
+            <div class="text-3xl">Adrian Burgos</div>
+            <div class="text-xl">Web Development</div>
+            <div class="text-base">...a coder career</div>
+          </div>
         </div>
+        <!-- <div class="absolute top-0 bg-white h-54 w-96 left-5 ml-7 " style="transform: rotate(75deg);"></div> -->
       </div>
-      <!-- <div class="absolute top-0 bg-white h-54 w-96 left-5 ml-7 " style="transform: rotate(75deg);"></div> -->
-    </div>
-    <div class="flex flex-col grow">
-      <div class="
+      <div class="flex flex-col grow">
+        <div
+          class="
             relative
             w-full
             h-full
@@ -140,10 +209,16 @@
             bg-gradient-to-r
             from-zinc-400
             grow
-          ">
-        <img class="absolute object-cover w-full h-full opacity-5" src="./images/code.jpg" alt="" />
-      </div>
-      <div class="
+          "
+        >
+          <img
+            class="absolute object-cover w-full h-full opacity-5"
+            src="./images/code.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          class="
             relative
             w-full
             py-10
@@ -153,24 +228,29 @@
             h-44
             bg-zinc-700
             text-zinc-400
-          ">
-        <p>
-          <q>A dream does not become reality through magic; it takes sweat,
-            determination, and hard work.</q>
-        </p>
-        <a class="absolute bottom-[80px]" id="my-work"></a>
+          "
+        >
+          <p>
+            <q
+              >A dream does not become reality through magic; it takes sweat,
+              determination, and hard work.</q
+            >
+          </p>
+          <a class="absolute bottom-[80px]" id="my-work"></a>
+        </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <!-- <div class="relative m-0"> -->
+    </header>
+    <main class="bg-blend-lighten bg-zinc-100" style="background-image: url('https://docs.google.com/uc?export=download&id=19QXkNtM-2yKUySn2dgbFw8Ne5Qu7oA9O');">
+      <!-- <div class="relative m-0"> -->
 
-    <!-- </div> -->
-    <section class="relative w-full pt-14">
-      <!-- my work header card -->
-      <div class="
+      <!-- </div> -->
+      <section class="relative w-full pt-14 bg-gradient-to-b from-zinc-700">
+        <!-- my work header card -->
+        <div
+          class="
             w-4/5
             p-10
+            mt-5
             mx-auto
             mb-10
             bg-green-300
@@ -178,103 +258,158 @@
             shadow-2xl
             text-zinc-600
             -rotate-3
-          ">
-        <h2 class="text-4xl font-black text-center text-zinc-600">
-          My Work!
-        </h2>
-      </div>
-      <!-- carousel -->
+          "
+        >
+          <h2 class="text-4xl font-black text-center text-zinc-600">
+            My Work!
+          </h2>
+        </div>
+        <!-- carousel -->
+        <div class="w-full h-auto">
+          <div
+            class="
+              relative
+              object-contain
+              w-full
+              h-[30vh]
+              overflow-hidden
+              text-4xl
+              mb-5
+              shadow-2xl
+            "
+          >
+            <div
+              class="absolute z-20 w-full h-full no-slide"
+              
+            ></div>
+            <div
+              class="
+                transition-all
+                duration-[1500ms]
+                bg-red-300
+                inset-0
+                w-full
+                h-full
+                absolute
+                visible
+                translate-x-0
+              "
+            >
+              <img class="w-full h-full object-contain" src="https://docs.google.com/uc?export=download&id=1hTbZKG4nwGaMcNHx9jqmtPfIDDjz501m" alt="" />
+            </div>
+            <div
+              class="
+                transition-all
+                duration-[1500ms]
+                bg-blue-300
+                inset-0
+                w-full
+                h-full
+                absolute
+                visible
+                next
+                translate-x-full
+              "
+            >
+              <img class="w-full h-full object-contain" src="https://docs.google.com/uc?export=download&id=1C4NXIAcVLQv6NC34Lx077WNA3x_n73_k" alt="" />
+            </div>
+            <div
+              class="
+                transition-all
+                duration-[1500ms]
+                bg-green-300
+                inset-0
+                w-full
+                h-full
+                absolute
+                invisible
+                -translate-x-full
+              "
+            >
+              <img
+                class="w-full h-full object-contain"
+                src="https://docs.google.com/uc?export=download&id=127m-88SPiMJH-WainzedkrEKH7Eks6hH"
+                alt=""
+              />
+            </div>
+            <div
+              id="next"
+              class="
+                absolute
+                inset-y-0
+                left-0
+                z-20
+                flex
+                items-center
+                justify-center
+                text-zinc-200
+                bg-zinc-700/25
+                no-slide
+                cursor-pointer
+              "
+            >
+              <span
+                class="iconify"
+                data-icon="dashicons:arrow-left-alt2"
+              ></span>
+            </div>
+            <a
+              id="previous"
+              class="
+                absolute
+                inset-y-0
+                right-0
+                z-20
+                flex
+                items-center
+                justify-center
+                text-zinc-200
+                bg-zinc-700/25
+                no-slide
+                cursor-pointer
+              "
+              ><span
+                class="iconify"
+                data-icon="dashicons:arrow-right-alt2"
+              ></span
+            ></a>
+          </div>
+        </div>
+        <div class="p-5 font-medium">
+          <p
+            class="pl-2 text-justify border-l-8 border-solid border-l-green-300"
+          >
+            I get started my web develoment lessons at
+            <a
+              class="font-bold text-zinc-700"
+              href="https://www.freecodecamp.org/learn/"
+              >FreeCodeCamp</a
+            >
+            , then moved to
+            <a
+              class="font-bold text-zinc-700"
+              href="https://www.frontendmentor.io/home"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Frontend Mentor</a
+            >.
+          </p>
+        </div>
 
-      <div class="relative w-full h-64 overflow-hidden text-4xl mb-5"
-        style="box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4)">
-        <a class="absolute z-10 w-full h-full no-slide" href="#notop"></a>
-        <div class="
-              transition-all
-              duration-[1500ms]
-              bg-red-400
-              inset-0
-              w-full
-              h-full
-              absolute
-              visible
-              translate-x-0
-            ">
-          <img src="./images/carousel/pic1.png" alt="" />
-        </div>
-        <div class="
-              transition-all
-              duration-[1500ms]
-              bg-blue-400
-              inset-0
-              w-full
-              h-full
-              absolute
-              visible
-              next
-              translate-x-full
-            ">
-          <img src="./images/carousel/pic2.png" alt="" />
-        </div>
-        <div class="
-              transition-all
-              duration-[1500ms]
-              bg-green-400
-              inset-0
-              w-full
-              h-full
-              absolute
-              invisible
-              -translate-x-full
-            ">
-          <img src="./images/carousel/pic3.png" alt="" />
-        </div>
-        <div id="next" class="
-              absolute
-              inset-y-0
-              left-0
-              z-20
-              flex
-              items-center
-              justify-center
-              text-zinc-200
-              bg-zinc-700/25
-              no-slide
-            ">
-          <span class="iconify" data-icon="dashicons:arrow-left-alt2"></span>
-        </div>
-        <a id="previous" class="
-              absolute
-              inset-y-0
-              right-0
-              z-20
-              flex
-              items-center
-              justify-center
-              text-zinc-200
-              bg-zinc-700/25
-              no-slide
-            "><span class="iconify" data-icon="dashicons:arrow-right-alt2"></span></a>
-      </div>
-      <div class="p-5 font-medium">
-        <p class="pl-2 text-justify border-l-4 border-solid border-l-green-300">
-          I get started my web develoment lessons at
-          <a class="font-bold text-zinc-700" href="https://www.freecodecamp.org/learn/">FreeCodeCamp</a>
-          , then moved to
-          <a class="font-bold text-zinc-700" href="https://www.frontendmentor.io/home" rel="noopener noreferrer"
-            target="_blank">Frontendmentor</a>.
+        <p class="px-5 pb-10 font-normal text-justify">
+          FreeCodeCamp is a good resourse to begin in this career so I will show
+          you some of the projects had to finished to complete their
+          certificates. I'm also completing Frontend Mentor's challenges to add
+          some experiense and a good choise to increase your portfolio.
         </p>
-      </div>
-      <p class="px-5 font-normal text-justify">
-        FreeCodeCamp is a good resourse to begin in this career so I will show
-        you some of the projects had to finished to complete their
-        certificates. I'm also completing Frontendmentor's challenges to add
-        some experiense and a good choise to increase your portfolio.
-      </p>
-      <a class="absolute bottom-[80px]" id="free-code-camp-projects"></a>
-    </section>
-    <section class="pt-14">
-      <!-- freeCodeCamp header card -->
-      <div class="
+        <hr class="border-t-8 border-t-zinc-400 m-5" />
+        <a class="absolute bottom-[80px]" id="free-code-camp-projects"></a>
+      </section>
+
+      <section class="pt-14">
+        <!-- freeCodeCamp header card -->
+        <div
+          class="
             w-4/5
             p-10
             mx-auto
@@ -284,31 +419,47 @@
             text-zinc-600
             bg-rose-300
             rotate-3
-          ">
-        <h2 class="text-2xl font-black text-left">
-          FreeCodeCamp Projects
-          <span class="inline iconify" data-icon="simple-icons:freecodecamp"></span>
-        </h2>
-      </div>
-      <div class="p-5 font-medium mb-10">
-        <p class="
+          "
+        >
+          <h2 class="text-2xl font-black text-left">
+            FreeCodeCamp Projects
+            <span
+              class="inline iconify"
+              data-icon="simple-icons:freecodecamp"
+            ></span>
+          </h2>
+        </div>
+        <div class="p-5 font-medium">
+          <p
+            class="
               text-justify
               pl-2
               text-justify
-              border-l-4 border-solid border-l-rose-300
-            ">
-          Here you are going to find some of the project I've finish to
-          complete the
-          <a class="font-bold text-zinc-700" href="https://www.freecodecamp.org/learn/">FreeCodeCamp</a>
-          certifications.
-        </p>
-      </div>
-      <!-- freeCodeCamp projects card grid -->
-      <div class="place-items-center grid grid-cols-1 gap-10">
-
-        <!-- chales darwin page card -->
-        <a href="https://codepen.io/Adrianburgoscolas/full/ExXEgjG" target="_blank" rel="noopener noreferrer">
-          <div class="
+              border-l-8 border-solid border-l-rose-300
+            "
+          >
+            Here you are going to find some of the project I've finish to
+            complete the
+            <a
+              class="font-bold text-zinc-700"
+              href="https://www.freecodecamp.org/learn/"
+              >FreeCodeCamp</a
+            >
+            certifications.
+          </p>
+        </div>
+          <p class="px-5 pb-10 font-normal text-justify">
+            FreeCodeCamp is a good resourse to begin in this career so I will show
+            you some of the projects had to finished to complete their
+            certificates. I'm also completing Frontend Mentor's challenges to add
+            some experiense and a good choise to increase your portfolio.
+          </p>
+        
+        <!-- freeCodeCamp projects card grid -->
+        <div class="place-items-center grid grid-cols-1 gap-10">
+          <!-- chales darwin page card /////////////////////////////////////////////////////////////////////////-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -317,28 +468,51 @@
               h-96
               -rotate-2
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
-            <div class="relative h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[410px] -top-[2px] absolute z-0"
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative h-72 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[410px] -top-[2px] absolute z-0"
                 src="https://docs.google.com/uc?export=download&id=1goGSjw2Bla0WblUcp2YqCDw58CCwK3II"
-                alt="My first web page project" />
+                alt="My first web page project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                My first web page!
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://codepen.io/Adrianburgoscolas/full/ExXEgjG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  My First Web Page!
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+
+              <p class="text-center font-normal">
                 I include this one because it was my first web page, it was
                 great when I completed it
               </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://codepen.io/Adrianburgoscolas/pen/ExXEgjG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:codepen-fill"
+                  ></span>
+                </a>
+              </p>
             </div>
-          </div>
-        </a>
-        <!-- Landing page card -->
-        <a href="https://codepen.io/Adrianburgoscolas/full/XWgExdW" target="_blank" rel="noopener noreferrer">
-          <div class="
+          </article>
+
+          <!-- Landing page card ///////////////////////////////////////////////////////////////////-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -347,28 +521,51 @@
               h-96
               rotate-3
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[410px] -top-[2px] z-0 "
+              <img
+                class="object-cover w-full h-[410px] -top-[2px] z-0"
                 src="https://docs.google.com/uc?export=download&id=1P8xf7VeS4nf1Z3yupTRpZaM-xYb1Oztr"
-                alt="A landing page project" />
+                alt="A landing page project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                A landing page
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://codepen.io/Adrianburgoscolas/full/XWgExdW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  A Landing Page
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
-                One of my early projects, a responsive static product landing page
+
+              <p class="text-center font-normal">
+                One of my early projects, a responsive static product landing
+                page
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://codepen.io/Adrianburgoscolas/pen/XWgExdW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:codepen-fill"
+                  ></span>
+                </a>
               </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-        <!-- Random quote machine card -->
-        <a href="https://codepen.io/Adrianburgoscolas/full/vYJGjKM" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- Random quote machine card -->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -377,28 +574,51 @@
               h-96
               -rotate-1
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[385px] -top-20 z-0 absolute"
+              <img
+                class="object-cover w-full h-[385px] -top-20 z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=1_xFt7DireUCKs0X7398l2D1QNgry_RHD"
-                alt="Automatic quote machine project" />
+                alt="Automatic quote machine project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                Automatic quote machine
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://codepen.io/Adrianburgoscolas/full/vYJGjKM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Quote Machine
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
-                In this one I started to add some JavaScript to automate and style this page
+
+              <p class="text-center font-normal">
+                In this one I started to add some JavaScript to automate and
+                style this page
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://codepen.io/Adrianburgoscolas/pen/vYJGjKM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:codepen-fill"
+                  ></span>
+                </a>
               </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-        <!-- Markdown Previewer card-->
-        <a href="https://codepen.io/Adrianburgoscolas/full/OJjXwBr" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- Markdown Previewer card-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -407,28 +627,51 @@
               h-96
               rotate-2
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[385px] top-0 z-0 absolute"
+              <img
+                class="object-cover w-full h-[385px] top-0 z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=1Rf8jY4NULMS8vfKsonS8V4xLA6nx_CW9"
-                alt="Markdown Previewer project" />
+                alt="Markdown Previewer project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                Markdown Previewer
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://codepen.io/Adrianburgoscolas/full/OJjXwBr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Markdown Previewer
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
-                Used React in this project because by that time I was learning it
+
+              <p class="text-center font-normal">
+                Used React in this project because by that time I was learning
+                it
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://codepen.io/Adrianburgoscolas/pen/OJjXwBr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:codepen-fill"
+                  ></span>
+                </a>
               </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-        <!-- Drum Machine card-->
-        <a href="https://codepen.io/Adrianburgoscolas/full/qBXqaQo" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- Drum Machine card-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -437,28 +680,51 @@
               h-96
               -rotate-3
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[385px] -top-14 z-0 absolute"
+              <img
+                class="object-cover w-full h-[325px] -top-14 z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=1CoTDjaf8JHS9VU_f0aWK50omVjiY0bJA"
-                alt="Drum Machine project" />
+                alt="Drum Machine project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                Drum Machine
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://codepen.io/Adrianburgoscolas/full/qBXqaQo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Drum Machine
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
-                A lot of interaction in this project, playing with sounds and keyboard
+
+              <p class="text-center font-normal">
+                A lot of interaction in this project, playing with sounds and
+                keyboard
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://codepen.io/Adrianburgoscolas/pen/qBXqaQo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:codepen-fill"
+                  ></span>
+                </a>
               </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-         <!-- JavaScript Calculator card-->
-         <a href="https://adrianburgoscolas.github.io/my-react-app/" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- JavaScript Calculator card-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -467,28 +733,50 @@
               h-96
               rotate-1
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[385px] -top-24 z-0 absolute"
+              <img
+                class="object-cover w-full h-[385px] -top-28 z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=1uBwRRVdlmkneqkTU5k71PWHPNPeEhOn6"
-                alt="JavaScript Calculator project" />
+                alt="JavaScript Calculator project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                JavaScript Calc
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/my-react-app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  JavaScript Calc
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+
+              <p class="text-center font-normal">
                 A simple calculator web app using JavaScript
               </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/my-react-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-        <!-- 25 + 5 Clock card-->
-        <a href="https://adrianburgoscolas.github.io/25-plus-5-clock/" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- 25 + 5 Clock card-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -497,28 +785,48 @@
               h-96
               -rotate-1
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[380px] -top-10 z-0 absolute"
+              <img
+                class="object-cover w-full h-[380px] -top-10 z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=1uWrEowdYtGUsiNXUpYnbw6FIOA93ANmk"
-                alt="25 + 5 Clock project" />
+                alt="25 + 5 Clock project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                25 + 5 Clock
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/25-plus-5-clock/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  25 + 5 Clock
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
-                25 + 5 Clock, a timer...
+
+              <p class="text-center font-normal">25 + 5 Clock, a timer...</p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/25-plus-5-clock"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
               </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-        <!-- visualize data with a bar chart card-->
-        <a href="https://adrianburgoscolas.github.io/visualize-data-with-a-bar-chart/" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- visualize data with a bar chart card-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -527,28 +835,50 @@
               h-96
               rotate-2
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[380px] -top-20 z-0 absolute"
+              <img
+                class="object-cover w-full h-[380px] -top-20 z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=1aOztzyWmhEaxTfcIu0CGYo0PLdDiEEm3"
-                alt="visualize data with a bar chart project" />
+                alt="visualize data with a bar chart project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                Bar chart component
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/visualize-data-with-a-bar-chart/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bar Chart
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+
+              <p class="text-center font-normal">
                 Data visualisation with a bar chart
               </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/visualize-data-with-a-bar-chart"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-        <!-- Visualize Data with a Scatterplot Graph card-->
-        <a href="https://adrianburgoscolas.github.io/visualize-data-with-a-scatterplot-graph/" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- Visualize Data with a Scatterplot Graph card-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -557,28 +887,50 @@
               h-96
               -rotate-3
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[280px] -top-10 z-0 absolute"
+              <img
+                class="object-cover w-full h-[280px] -top-10 z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=14o064eRepgZQEicUPwAzaRaDQoZgMgkM"
-                alt="Visualize Data with a Scatterplot Graph project" />
+                alt="Visualize Data with a Scatterplot Graph project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                Scatterplot Graph component
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/visualize-data-with-a-scatterplot-graph/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Scatterplot Graph
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+
+              <p class="text-center font-normal">
                 Data visualisation with a Scatterplot Graph
               </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/visualize-data-with-a-scatterplot-graph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
             </div>
+          </article>
 
-          </div>
-        </a>
-        <!-- Visualize Data with a Heat Map card-->
-        <a href="https://adrianburgoscolas.github.io/Visualize-Data-with-a-Heat-Map/" target="_blank" rel="noopener noreferrer">
-          <div class="
+          <!-- Visualize Data with a Heat Map card-->
+          <article
+            class="
               flex flex-col
               overflow-hidden
               rounded-lg
@@ -587,29 +939,637 @@
               h-96
               rotate-3
               transition-all
-              hover:scale-[1.1] hover:shadow-2xl hover:rotate-0
-            ">
-
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
             <div class="relative w-full h-64 overflow-hidden bg-white">
-              <img class="object-cover w-full h-[320px] -top-10  z-0 absolute"
+              <img
+                class="object-cover w-full h-[320px] -top-[70px] z-0 absolute"
                 src="https://docs.google.com/uc?export=download&id=1QzipWGFKkMq9IW_IaTiSTlrwPAFISvt9"
-                alt="Visualize Data with a Heat Map project" />
+                alt="Visualize Data with a Heat Map project"
+              />
             </div>
-            <div class="bg-white z-10">
-              <h3 class="z-10 pt-5 font-bold text-center bg-white text-zinc-700">
-                Heat Map component
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/Visualize-Data-with-a-Heat-Map/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Heat Map
+                </a>
               </h3>
-              <p class="h-full px-5 pb-5 text-center bg-white z-10">
+
+              <p class="text-center font-normal">
                 Data visualisation with a Heat Map
               </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/Visualize-Data-with-a-Heat-Map"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
             </div>
+          </article>
 
+          <!-- Personal Library card -->
+          <article
+            class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-1
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[320px] -top-2 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1p90EzCXs7WPK9g6R8GzWYdLuAFYh8-YC"
+                alt="Personal Library API project"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://boilerplate-project-library.adrianburgoscol.repl.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Personal Library API
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                A Node.JS Personal Library API using MongoDB
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://replit.com/@adrianburgoscol/boilerplate-project-library"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="simple-icons:replit"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- Node.JS Authentication and Socket.IO -->
+          <article
+            class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-1
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[320px] -top-4 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1c8hKO2tfbw6VlzJ9PKCMIec9lRj9aC_l"
+                alt="Node.JS Authentication and Socket.IO project"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://boilerplate-advancednode.adrianburgoscol.repl.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Authentication
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                Node.JS Authentication and Socket.IO, also used Mocha testing
+                framework
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://replit.com/@adrianburgoscol/boilerplate-advancednode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="simple-icons:replit"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+          <div class="relative pb-10">
+            <a class="absolute bottom-[68px]" id="frontendmentor-projects"></a>
           </div>
-        </a>
+        </div>
+        <hr class="border-t-8 border-t-zinc-400 mt-1 m-5" />
+      </section>
+      <section class="relative pt-14">
+        <!-- frontendmentor header card ///////////////////////////////////////////////////////////// -->
+        <div
+          class="
+            w-4/5
+            p-10
+            mx-auto
+            mb-5
+            rounded-lg
+            shadow-2xl
+            text-zinc-600
+            bg-blue-300
+            -rotate-2
+          "
+        >
+          <h2 class="text-2xl font-black text-left">
+            Frontend Mentor Projects
+            <span
+              class="inline iconify"
+              data-icon="simple-icons:frontendmentor"
+            ></span>
+          </h2>
+        </div>
+        <div class="p-5 font-medium mb-10">
+          <p
+            class="text-justify pl-2 border-l-8 border-solid border-l-blue-300"
+          >
+            <a
+              class="font-bold text-zinc-700"
+              href="https://www.frontendmentor.io/home"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Frontend Mentor</a
+            >
+            is a good place to practice all you learned about web development,
+            there are a lot of challenges from newbie to advance for free and
+            even more if you pay, in any case you would be able to add
+            experience and lot of project to your portfolio
+          </p>
+        </div>
+        <div class="place-items-center grid grid-cols-1 gap-10">
+          <!-- Order Summary Component Card -->
+          <article
+            class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-1
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[420px] -top-8 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1MqllsM_UWFfvmRJ6nxElstrwKlkKh09o"
+                alt="Order summary component solution"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/order-summary-component/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order Summary
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                Order summary component solution
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/order-summary-component"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- NFT Preview Card Component -->
+          <article
+            class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-1
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[420px] -top-16 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1S_4Di-UTOckpODKBCr2UHGDRO4wCslwT"
+                alt="NFT Preview Card Component solution"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/nft-preview-card-component/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  NFT Preview
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                NFT Preview card component solution
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/nft-preview-card-component"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- Stats preview card component solution card -->
+          <article
+            class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-2
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[420px] -top-20 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1p7bwHFX0OthDwvz_hxeFwKB5faELsBet"
+                alt="Stats preview card component solution"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/stats-preview-card-component/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Stats preview
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                Stats preview card component solution
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/stats-preview-card-component"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- Profile card component solution card -->
+          <article
+            class="
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-1
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[420px] -top-20 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=12CV3dWipC27bLVDPvJyFoaxf43EWMmya"
+                alt="Profile card component solution"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/profile-card-component/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Profile card
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                Profile card component solution
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/profile-card-component"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- 3-column preview card component solution -->
+          <article
+            class="
+              z-10
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              rotate-1
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[450px] -top-40 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1tMlVgAvj6pNGrnYvGoJL0OAER3NIO1sK"
+                alt="3-column preview card component solution"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/3-column-preview-card-component-main/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  3-column preview
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                3-column preview card component solution
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/3-column-preview-card-component-main"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ accordion card solution -->
+          <article
+            class="
+              z-10
+              flex flex-col
+              overflow-hidden
+              rounded-lg
+              shadow-xl
+              w-72
+              h-96
+              -rotate-2
+              transition-all
+              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
+            "
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[400px] -top-20 z-0 absolute"
+                src="https://docs.google.com/uc?export=download&id=1-o2sQ2gZCvGhsqkUIt4w-o37Ec15WALP"
+                alt="FAQ accordion card solution"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://adrianburgoscolas.github.io/faq-accordion-card/#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FAQ accordion
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">FAQ accordion card solution</p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/faq-accordion-card"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+          <div class="relative">
+            <a class="absolute bottom-[68px]" id="about"></a>
+          </div>
+        </div>
+        <hr class="border-t-8 border-t-zinc-400 mt-1 m-5 z-10" />
+      </section>
+
+      <!-- About section -->
+    <section class="relative pt-10 text-zinc-700">
+      <div
+        class="
+          mx-auto
+          h-auto
+          w-72
+          bg-white
+          shadow-2xl
+          rounded-lg
+          overflow-hidden
+        "
+      >
+        <div
+          class="
+            h-44
+            flex
+            justify-center
+            items-center
+            bg-gradient-to-r
+            from-blue-500
+            to-cyan-500
+            relative
+          "
+        >
+          <img
+            class="w-32 z-10 rounded-full border-8 border-white"
+            src="https://docs.google.com/uc?export=download&id=1nhrP7fZStQFjYWKt-2cWs117z9s7MG6w"
+            alt=""
+          />
+          <div class="z-0 absolute bottom-0 h-1/2 w-full bg-white"></div>
+        </div>
+        <p class=" px-8 pb-8 w-full h-full mx-auto text-center">
+          <q
+            >Hi, I'm <span class="font-bold">Adrian Burgos</span>, I'm making a
+            professional career as a coder, I just love it...
+          </q>
+        </p>
+      </div>
+      <p class="px-5 pt-10 font-normal text-justify">
+        My professtional career started as Telecomunications and Electronic
+        Engineer. After more than 10 years performing as well I decided to start
+        a new career as a coder, I always liked to solve problems, to create and
+        develop and all those things are what a coder do.
+      </p>
+      <br />
+      
+      <p class="px-5 font-normal text-justify z-10">
+        I studied Telecomunications and Electronic Engineer in the university
+        and spected to perform in the develompment, research o creating areas
+        but in my region those things are not posible due to lack of resourses
+        and other limitations so decided to start as a web developer by my self
+        and I can said I love it, it fills all my engineering spirit.
+      </p>
+      <br />
+      <!-- <p class="px-5 pb-96 font-normal text-justify">
+        
+        
+      </p> -->
+      <ul class="px-5 pb-96  font-normal text-justify z-10 list-disc list-inside">I've been certified by freeCodeCamp in:
+        <li><a href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/responsive-web-design">Responsive Web Design</a></li>
+        <li><a href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></li>
+        <li><a href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/front-end-development-libraries">Front End Development Libraries</a></li>
+        <li><a href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/back-end-development-and-apis">Back End Development and APIs</a></li>
+        <li><a href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/quality-assurance-v7">Quality Assurance</a></li>
+      </ul>
+      <div
+        class="
+          absolute
+          w-full
+          h-96
+          bg-gradient-to-t
+          from-zinc-700
+          -bottom-0
+          z-0
+        "
+      ></div>
+      <div class="relative">
+        <a class="absolute bottom-[68px]" id="contact"></a>
       </div>
     </section>
-  </main>
-  <footer></footer>
-</body>
-
+    </main>
+    
+    <footer
+      class="p-10 h-[calc(100vh-80px)] bg-zinc-700 min-h-[587px]"
+    >
+    <div
+          class="
+            w-4/5
+            p-10
+            mt-5
+            mx-auto
+            mb-10
+            bg-zinc-400
+            rounded-lg
+            shadow-2xl
+            text-zinc-600
+            rotate-2
+          "
+        >
+          <h2 class="text-4xl font-black text-center text-zinc-600">
+            Contact
+          </h2>
+        </div>
+        <div class="pb-5 w-72 h-64 mx-auto text-zinc-400 text-center font-bold text-lg flex flex-col items-center justify-around">
+          <a href="https://www.freecodecamp.org/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3"><span class="text-4xl inline iconify" data-icon="simple-icons:freecodecamp"></span><span class="pl-2">freeCodeCamp</span></a>
+          <a href="https://www.frontendmentor.io/profile/adrianburgoscolas"><span class="text-4xl inline iconify" data-icon="simple-icons:frontendmentor"></span><span class="pl-2">Frontend Mentor</span></a>
+          <a href="https://www.linkedin.com/in/adrian-burgos-1776a6144/"><span class="text-4xl inline iconify" data-icon="akar-icons:linkedin-fill"></span><span class="pl-2">LinkedIn</span></a>
+          <a href="https://github.com/adrianburgoscolas"><span class="text-4xl inline iconify" data-icon="akar-icons:github-fill"></span><span class="pl-2">GitHub</span></a>
+          <a href="mailto:adrian.burgos.colas@gmail.com"><span class="text-4xl inline iconify" data-icon="mdi:gmail"></span><span class="pl-2">Mail</span></a>
+        </div>
+        <p class="pt-5 text-center text-zinc-300 text-sm">Coded by <a class="underline" href="#home">Adrian Burgos</a></p>
+        <div class="w-80 mx-auto flex justify-around text-zinc-400 text-2xl p-5">
+          <span class="iconify" data-icon="akar-icons:html-fill"></span>
+          <span class="iconify" data-icon="akar-icons:css-fill"></span>
+          <span class="iconify" data-icon="akar-icons:javascript-fill"></span>
+          <span class="iconify" data-icon="akar-icons:react-fill"></span>
+          <span class="iconify" data-icon="bx:bxl-nodejs"></span>
+          <span class="iconify" data-icon="simple-icons:tailwindcss"></span>
+          <span class="iconify" data-icon="akar-icons:github-fill"></span>
+        </div>
+  </footer>
+  </body>
 </html>
