@@ -128,7 +128,6 @@
                 "
                 id="dropdown-menu"
               >
-                <!-- group-hover:visible group-hover:opacity-100 -->
                 <ul>
                   <li class="p-3">
                     <span
@@ -187,12 +186,36 @@
 
     <!-- Header -->
     <header
-      class="flex flex-col overflow-hidden bg-zinc-700 shadow-2xl"
-      style="height: calc(100vh - 80px); min-height: 587px"
+      class="flex flex-col items-center  overflow-hidden bg-zinc-700 shadow-2xl w-screen min-h-[580px]
+      h-[calc(100vh-80px)]
+      sm:relative
+      md:min-h-[750px]
+      "
     >
-      <div class="flex w-screen h-64 bg-white shadow shrink-0">
+      <div class="shadow-2xl origin-center bg-zinc-500 items-center z-10 absolute w-full 
+        sm:justify-center 
+        sm:flex 
+        sm:w-[120vw] 
+        sm:top-20
+        sm:h-72
+        sm:rotate-3
+
+        md:w-[680px]
+        md:h-[420px]
+        md:top-44
+        md:rounded-[80px]
+      ">
+      <div class="overflow-hidden flex w-screen h-64 bg-white shadow-2xl shrink-0
+        sm:-rotate-3
+
+        md:w-[700px]
+        md:h-96
+        md:rounded-[80px]
+       ">
         <img
-          class="block object-cover object-left-top h-full w-44"
+          class="block object-cover object-left-top h-full w-44
+          md:w-72
+          "
           src="https://docs.google.com/uc?export=download&id=1M22wJ7-I_xlKzNR4C-bMGcT5Fv52stMh"
           alt=""
         />
@@ -207,27 +230,35 @@
             skew-x-12
             bg-white
             text-zinc-500
+            md:p-14
           "
+         
         >
           <div class="-skew-x-12">
-            <div class="text-5xl font-black">Portfolio</div>
-            <div class="text-3xl">Adrian Burgos</div>
-            <div class="text-xl">Web Development</div>
-            <div class="text-base">...a coder career</div>
+            <div class="text-5xl font-black sm:text-7xl">Portfolio</div>
+            <div class="text-3xl sm:text-4xl">Adrian Burgos</div>
+            <div class="text-xl sm:text-2xl">Web Development</div>
+            <div class="text-base sm:text-xl">...a coder career</div>
           </div>
         </div>
-        <!-- <div class="absolute top-0 bg-white h-54 w-96 left-5 ml-7 " style="transform: rotate(75deg);"></div> -->
       </div>
-      <div class="flex flex-col grow">
+      </div>
+      <div class="flex flex-col grow 
+      md:flex-row
+      md:w-screen
+      ">
         <div
           class="
             relative
-            w-full
+            w-screen
             h-full
             overflow-hidden
             bg-gradient-to-r
             from-zinc-400
             grow
+
+            md:grow-0
+            md:w-1/2
           "
         >
           <img
@@ -238,7 +269,7 @@
         </div>
         <div
           class="
-            relative
+            
             w-full
             py-10
             pr-4
@@ -247,15 +278,27 @@
             h-44
             bg-zinc-700
             text-zinc-400
+            md:flex
+            md:items-end
+            md:h-full
+            md:skew-x-12
+            md:origin-bottom-left
+            md:w-1/2
+
           "
         >
-          <p>
+          <p class=" relative
+          md:w-full
+          md:-skew-x-12
+          
+          ">
             <q
               >A dream does not become reality through magic; it takes sweat,
               determination, and hard work.</q
             >
+            <a class="absolute bottom-[80px] md:bottom-[40px]" id="my-work"></a>
           </p>
-          <a class="absolute bottom-[80px]" id="my-work"></a>
+          
         </div>
       </div>
     </header>
@@ -284,13 +327,13 @@
           </h2>
         </div>
         <!-- carousel -->
-        <div class="w-full h-auto">
+        <div class="w-full h-[60vw]">
           <div
             class="
               relative
               object-contain
               w-full
-              h-[30vh]
+              h-full
               overflow-hidden
               text-4xl
               mb-5
@@ -302,7 +345,7 @@
               class="
                 transition-all
                 duration-[1500ms]
-                bg-red-300
+                bg-white/50
                 inset-0
                 w-full
                 h-full
@@ -321,7 +364,7 @@
               class="
                 transition-all
                 duration-[1500ms]
-                bg-blue-300
+                bg-white/50
                 inset-0
                 w-full
                 h-full
@@ -341,7 +384,7 @@
               class="
                 transition-all
                 duration-[1500ms]
-                bg-green-300
+                bg-white/50
                 inset-0
                 w-full
                 h-full
@@ -359,17 +402,19 @@
             <div
               id="next"
               class="
-                absolute
-                inset-y-0
-                left-0
-                z-20
-                flex
-                items-center
-                justify-center
-                text-zinc-200
-                bg-zinc-700/25
-                no-slide
-                cursor-pointer
+              rounded-full
+              absolute
+              object-center
+              left-2
+              top-[calc(50%-20px)]
+              z-20
+              flex
+              items-center
+              justify-center
+              text-zinc-100/30
+              bg-zinc-700/25
+              no-slide
+              cursor-pointer
               "
             >
               <span
@@ -380,14 +425,16 @@
             <a
               id="previous"
               class="
+                rounded-full
                 absolute
-                inset-y-0
-                right-0
+                object-center
+                right-2
+                top-[calc(50%-20px)]
                 z-20
                 flex
                 items-center
                 justify-center
-                text-zinc-200
+                text-zinc-100/30
                 bg-zinc-700/25
                 no-slide
                 cursor-pointer
@@ -445,7 +492,7 @@
             rotate-3
           "
         >
-          <h2 class="text-2xl font-black text-left">
+          <h2 class="text-2xl font-black text-left md:text-center">
             FreeCodeCamp Projects
             <span
               class="inline iconify"
@@ -456,7 +503,6 @@
         <div class="p-5 font-medium">
           <p
             class="
-              text-justify
               pl-2
               text-justify
               border-l-8 border-solid border-l-rose-300
@@ -480,7 +526,7 @@
         </p>
 
         <!-- freeCodeCamp projects card grid -->
-        <div class="place-items-center grid grid-cols-1 gap-10">
+        <div class="place-items-center grid grid-cols-1 md:grid-cols-2 gap-10">
           <!-- chales darwin page card /////////////////////////////////////////////////////////////////////////-->
           <article
             class="
@@ -492,6 +538,7 @@
               h-96
               -rotate-2
               transition-all
+              md:rotate-2
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -545,6 +592,7 @@
               h-96
               rotate-3
               transition-all
+              md:-rotate-3
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -704,6 +752,7 @@
               h-96
               -rotate-3
               transition-all
+              md:rotate-3
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -757,6 +806,7 @@
               h-96
               rotate-1
               transition-all
+              md:-rotate-1
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -911,6 +961,7 @@
               h-96
               -rotate-3
               transition-all
+              md:rotate-3
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -963,6 +1014,7 @@
               h-96
               rotate-3
               transition-all
+              md:-rotate-3
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -1129,7 +1181,7 @@
             -rotate-2
           "
         >
-          <h2 class="text-2xl font-black text-left">
+          <h2 class="text-2xl font-black text-left md:text-center">
             Frontend Mentor Projects
             <span
               class="inline iconify"
@@ -1154,7 +1206,9 @@
             experience and lot of project to your portfolio
           </p>
         </div>
-        <div class="place-items-center grid grid-cols-1 gap-10">
+        <div class="place-items-center grid grid-cols-1 gap-10
+        md:grid-cols-2
+        ">
           <!-- Order Summary Component Card -->
           <article
             class="
@@ -1270,6 +1324,7 @@
               h-96
               rotate-2
               transition-all
+              md:-rotate-2
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -1322,6 +1377,7 @@
               h-96
               -rotate-1
               transition-all
+              md:rotate-1
               lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
             "
           >
@@ -1608,8 +1664,8 @@
           h-64
           mx-auto
           text-zinc-400 text-center
-          font-bold
-          text-lg
+          text-2xl
+          
           flex flex-col
           items-center
           justify-around
@@ -1618,34 +1674,34 @@
         <a
           href="https://www.freecodecamp.org/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3"
           ><span
-            class="text-4xl inline iconify"
+            class=" inline iconify"
             data-icon="simple-icons:freecodecamp"
           ></span
           ><span class="pl-2">freeCodeCamp</span></a
         >
         <a href="https://www.frontendmentor.io/profile/adrianburgoscolas"
           ><span
-            class="text-4xl inline iconify"
+            class=" inline iconify"
             data-icon="simple-icons:frontendmentor"
           ></span
           ><span class="pl-2">Frontend Mentor</span></a
         >
         <a href="https://www.linkedin.com/in/adrian-burgos-1776a6144/"
           ><span
-            class="text-4xl inline iconify"
+            class=" inline iconify"
             data-icon="akar-icons:linkedin-fill"
           ></span
           ><span class="pl-2">LinkedIn</span></a
         >
         <a href="https://github.com/adrianburgoscolas"
           ><span
-            class="text-4xl inline iconify"
+            class=" inline iconify"
             data-icon="akar-icons:github-fill"
           ></span
           ><span class="pl-2">GitHub</span></a
         >
         <a href="mailto:adrian.burgos.colas@gmail.com"
-          ><span class="text-4xl inline iconify" data-icon="mdi:gmail"></span
+          ><span class=" inline iconify" data-icon="mdi:gmail"></span
           ><span class="pl-2">Mail</span></a
         >
       </div>
