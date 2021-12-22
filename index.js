@@ -32,6 +32,7 @@ $(document).ready(function(){
 
     $("#menu-btn").click(function(){
         $("#side-nav").removeClass("w-0").addClass("w-full")
+        // $("#side-nav").removeClass("invisible").addClass("visible")
         // $("#side-nav").css("width","100%");
     });
     // function mediaQueryFunc(x){
@@ -58,6 +59,7 @@ $(document).ready(function(){
     $(".close-side-nav").click(function(){
        if(mediaQuery.matches){
         $("#side-nav").removeClass("w-full").addClass("w-0")
+        // $("#side-nav").removeClass("visible").addClass("invisible")
        }
     });
     

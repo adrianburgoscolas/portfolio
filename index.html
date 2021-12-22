@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="m-0 2xl:text-4xl" lang="en">
+<html class ="w-screen overflow-x-hidden" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,20 +39,23 @@
     <!-- Responsive navigation bar, side bar while on mobile view -->
     <nav
       class="
+      m-0
         fixed
         top-0
+        left-0
         z-30
         flex
         items-center
         justify-between
-        w-full
+        w-screen
         h-20
         bg-zinc-700
         text-zinc-400
         shadow-2xl
+
       "
     >
-      <a id="menu-btn" href="#notop" class="w-10 ml-5 lg:hidden">
+      <a id="menu-btn" href="#notop" class="w-10 pl-5 lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-10 h-10"
@@ -72,7 +75,7 @@
       </a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-10 h-10 mr-5"
+        class="w-10 h-10 pr-5"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -91,6 +94,7 @@
           top-0
           flex
           w-0
+          
           h-screen
           mt-20
           overflow-hidden
@@ -99,7 +103,7 @@
           border-t border-zinc-400
           lg:transition-none
           lg:m-0
-          lg:w-full
+          lg:w-screen
           lg:h-20
           lg:overflow-visible
           lg:border-0
@@ -290,10 +294,13 @@
     >
       <div
         class="
+        overflow-hidden
+        top-20
+        left-0
           shadow-2xl
           origin-center
           bg-zinc-500
-          items-center
+          sm:items-center
           z-10
           absolute
           w-full
@@ -343,7 +350,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col grow md:flex-row md:w-screen">
+      <div class="overflow-hidden flex flex-col grow md:flex-row md:w-screen">
         <div
           class="
             relative
@@ -392,12 +399,12 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="w-screen">
       <!-- <div class="relative m-0"> -->
 
       <!-- </div> -->
       <section
-        class="relative w-full pt-14 bg-gradient-to-b from-zinc-700 lg:pt-5 2xl:pt-16"
+        class="relative w-full pt-14 bg-gradient-to-b from-zinc-700 lg:pt-5 2xl:pt-10"
       >
         <!-- my work header card -->
         <div
@@ -1793,7 +1800,7 @@
       </section>
     </main>
 
-    <footer class="p-10 h-[calc(100vh-5rem)] bg-zinc-700 min-h-[587px]">
+    <footer class="p-10 w-screen h-[calc(100vh-5rem)] bg-zinc-700 min-h-[587px]">
       <div
         class="
           w-4/5
@@ -1806,7 +1813,7 @@
           shadow-2xl
           text-zinc-600
           rotate-2
-          md:w-[615px]
+          md:w-[40rem]
         "
       >
         <h2 class="text-4xl font-black text-center text-zinc-600">Contact</h2>
