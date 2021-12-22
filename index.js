@@ -31,12 +31,36 @@ $(document).ready(function(){
     };
 
     $("#menu-btn").click(function(){
-        $("#side-nav").css("width","100%");
+        $("#side-nav").removeClass("w-0").addClass("w-full")
+        // $("#side-nav").css("width","100%");
     });
+    // function mediaQueryFunc(x){
+    //     if(x.matches){
+    //         $("#home-query").removeClass("close-side-nav");
+    //         $("#my-work-query").removeClass("close-side-nav");
+    //         $("#fcc-query").removeClass("close-side-nav");
+    //         $("#fem-query").removeClass("close-side-nav");
+    //         $("#about-query").removeClass("close-side-nav");
+    //         $("#contact-query").removeClass("close-side-nav");
+    //     }else{
+    //         $("#home-query").addClass("close-side-nav");
+    //         $("#my-work-query").addClass("close-side-nav");
+    //         $("#fcc-query").addClass("close-side-nav");
+    //         $("#fem-query").addClass("close-side-nav");
+    //         $("#about-query").addClass("close-side-nav");
+    //         $("#contact-query").addClass("close-side-nav");
+    //     }
+    // }
+    const mediaQuery = window.matchMedia("(max-width: 1024px)")
+    const mediaQuerySmall = window.matchMedia("(min-width: 1024px)")
+    // mediaQueryFunc(mediaQuery)
 
     $(".close-side-nav").click(function(){
-        $("#side-nav").css("width","0");
+       if(mediaQuery.matches){
+        $("#side-nav").removeClass("w-full").addClass("w-0")
+       }
     });
+    
     $(".no-slide").hover(
     function(){
         clearInterval(interval);
@@ -74,9 +98,15 @@ $(document).ready(function(){
 
     });
     $(".close-dropdown").click(function(){
-        dropdownMenu=false;
+        
+        dropdownMenu = false;
         
         dropdown(dropdownMenu);
     });
-    
+    // mediaQuery.addEventListener(function(){
+    //     $("#side-nav").css("width","0");
+    // });
+    // mediaQuerySmall.addEventListener(function(){
+    //     $("#side-nav").css("width","100%");
+    // })
 });
