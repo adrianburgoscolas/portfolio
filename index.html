@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html class ="w-screen overflow-x-hidden" lang="en">
+<html class="w-screen overflow-x-hidden" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adrian Burgos's Portfolio</title>
+    <meta
+      name="description"
+      content="I am Adrian Burgos, a full stack web developer, a coder, welcome to My Portfolio, here you will find my most significant projects and I hope you enjoy them."
+    />
     <!-- displays site properly based on user's device -->
-    <title>My Portfolio</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"
       integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ=="
@@ -38,22 +42,7 @@
   >
     <!-- Responsive navigation bar, side bar while on mobile view -->
     <nav
-      class="
-      m-0
-        fixed
-        top-0
-        left-0
-        z-30
-        flex
-        items-center
-        justify-between
-        w-screen
-        h-20
-        bg-zinc-700
-        text-zinc-400
-        shadow-2xl
-
-      "
+      class="m-0 fixed top-0 left-0 z-30 flex items-center justify-between w-screen h-20 bg-zinc-700 text-zinc-400 shadow-2xl"
     >
       <a id="menu-btn" href="#notop" class="w-10 text-2xl pl-5 lg:hidden">
         <svg
@@ -89,57 +78,19 @@
       </svg>
       <div
         id="side-nav"
-        class="
-          absolute
-          top-0
-          flex
-          w-0
-          
-          h-screen
-          mt-20
-          overflow-hidden
-          text-2xl
-          transition-all
-          border-t border-zinc-400
-          lg:transition-none
-          lg:m-0
-          lg:w-full
-          lg:h-20
-          lg:overflow-visible
-          lg:border-0
-          lg:text-lg
-        "
+        class="absolute top-0 flex w-0 h-screen mt-20 overflow-hidden text-2xl transition-all border-t border-zinc-400 lg:transition-none lg:m-0 lg:w-full lg:h-20 lg:overflow-visible lg:border-0 lg:text-lg"
       >
         <div
-          class="
-            flex flex-col
-            w-2/3
-            lg:flex-row lg:items-center lg:h-20 lg:w-full
-          "
+          class="flex flex-col w-2/3 lg:flex-row lg:items-center lg:h-20 lg:w-full"
         >
           <ul
-            class="
-              w-full
-              bg-zinc-700
-              self-start
-              lg:flex lg:items-center lg:justify-end lg:h-full
-            "
+            class="w-full bg-zinc-700 self-start lg:flex lg:items-center lg:justify-end lg:h-full"
           >
             <!-- Home menu entry-->
             <li class="pt-2 ml-5 lg:p-0 lg:justify-self-start lg:grow">
               <a
                 id="home-query"
-                class="
-                  transition-all
-                  close-side-nav
-                  pt-5
-                  px-4
-                  pb-1
-                  xl:pt-6 xl:pb-0
-                  rounded-xl
-                  close-dropdown
-                  lg:hover:bg-zinc-600
-                "
+                class="transition-all close-side-nav pt-5 px-4 pb-1 xl:pt-6 xl:pb-0 rounded-xl close-dropdown lg:hover:bg-zinc-600"
                 href="#home"
                 ><span class="lg:hidden">Home</span
                 ><span
@@ -153,13 +104,7 @@
             <li class="ml-5">
               <a
                 id="my-work-query"
-                class="
-                  close-side-nav close-dropdown
-                  rounded-xl
-                  p-2
-                  transition-all
-                  lg:hover:bg-zinc-600
-                "
+                class="close-side-nav close-dropdown rounded-xl p-2 transition-all lg:hover:bg-zinc-600"
                 href="#my-work"
                 >My Work!</a
               >
@@ -177,19 +122,7 @@
                 ></span
               ></a>
               <div
-                class="
-                  absolute
-                  invisible
-                  text-xl
-                  transition-all
-                  border
-                  rounded-md
-                  opacity-0
-                  bg-zinc-700
-                  border-zinc-400
-                  z-10
-                  shadow-2xl
-                "
+                class="absolute invisible text-xl transition-all border rounded-md opacity-0 bg-zinc-700 border-zinc-400 z-10 shadow-2xl"
                 id="dropdown-menu"
               >
                 <ul>
@@ -217,6 +150,16 @@
                       href="#frontendmentor-projects"
                       >Frontend Mentor Projects</a
                     >
+                    <hr class="mt-3" />
+                  </li>
+                  <li class="px-3 pb-3">
+                    <span
+                      class="inline iconify-inline"
+                      data-icon="bi:code-slash"
+                    ></span>
+                    <a id="fem-query" class="close-side-nav" href="#my-projects"
+                      >My Projects</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -227,13 +170,7 @@
             <li class="ml-5">
               <a
                 id="about-query"
-                class="
-                  close-side-nav close-dropdown
-                  rounded-xl
-                  p-2
-                  transition-all
-                  lg:hover:bg-zinc-600
-                "
+                class="close-side-nav close-dropdown rounded-xl p-2 transition-all lg:hover:bg-zinc-600"
                 href="#about"
                 >About</a
               >
@@ -243,13 +180,7 @@
             <li class="ml-5 lg:mr-5">
               <a
                 id="contact-query"
-                class="
-                  close-side-nav close-dropdown
-                  rounded-xl
-                  p-2
-                  transition-all
-                  lg:hover:bg-zinc-600
-                "
+                class="close-side-nav close-dropdown rounded-xl p-2 transition-all lg:hover:bg-zinc-600"
                 href="#contact"
                 >Contact</a
               >
@@ -262,13 +193,7 @@
           class="w-1/3 p-3 text-right bg-zinc-900/75 close-dropdown close-side-nav lg:hidden"
         >
           <span
-            class="
-              inline
-              text-5xl
-              cursor-pointer
-              close-side-nav close-dropdown
-              iconify
-            "
+            class="inline text-5xl cursor-pointer close-side-nav close-dropdown iconify"
             data-icon="ep:close"
           ></span>
         </div>
@@ -278,49 +203,13 @@
 
     <!-- Header -->
     <header
-      class="
-        flex flex-col
-        items-center
-        overflow-hidden
-        bg-zinc-700
-        shadow-2xl
-        w-screen
-        min-h-[580px]
-        h-[calc(100vh-5rem)]
-        sm:relative
-        md:min-h-[750px]
-        lg:min-h-[650px] 
-      "
+      class="flex flex-col items-center overflow-hidden bg-zinc-700 shadow-2xl w-screen min-h-[580px] h-[calc(100vh-5rem)] sm:relative md:min-h-[750px] lg:min-h-[650px]"
     >
       <div
-        class="
-        
-        top-20
-       
-          shadow-2xl
-          origin-center
-          bg-zinc-500
-          sm:items-center
-          z-10
-          absolute
-          w-screen
-          sm:justify-center sm:flex sm:w-[120vw] sm:top-20 sm:h-72 sm:rotate-3
-          md:w-[42rem] md:h-[25rem] md:top-44 md:rounded-[80px]
-          lg:top-[15%] lg:left-[15%]
-        "
+        class="top-20 shadow-2xl origin-center bg-zinc-500 sm:items-center z-10 absolute w-screen sm:justify-center sm:flex sm:w-[120vw] sm:top-20 sm:h-72 sm:rotate-3 md:w-[42rem] md:h-[25rem] md:top-44 md:rounded-[80px] lg:top-[15%] lg:left-[15%]"
       >
         <div
-          class="
-            overflow-hidden
-            flex
-            w-screen
-            h-64
-            bg-white
-            shadow-2xl
-            shrink-0
-            sm:-rotate-3
-            md:w-[42rem] md:h-96 md:rounded-[80px]
-          "
+          class="overflow-hidden flex w-screen h-64 bg-white shadow-2xl shrink-0 sm:-rotate-3 md:w-[42rem] md:h-96 md:rounded-[80px]"
         >
           <img
             class="block object-cover object-left-top h-full w-44 md:w-72"
@@ -328,41 +217,20 @@
             alt=""
           />
           <div
-            class="
-              w-full
-              h-full
-              py-6
-              pr-3
-              text-right
-              origin-bottom-left
-              skew-x-12
-              bg-white
-              text-zinc-500
-              md:p-14
-            "
+            class="w-full h-full py-6 pr-3 text-right origin-bottom-left skew-x-12 bg-white text-zinc-500 md:p-14"
           >
-            <div class="-skew-x-12">
+            <h1 class="-skew-x-12">
               <div class="text-5xl font-black sm:text-7xl">Portfolio</div>
               <div class="text-3xl sm:text-4xl">Adrian Burgos</div>
               <div class="text-xl sm:text-2xl">Web Development</div>
               <div class="text-base sm:text-xl">...a coder career</div>
-            </div>
+            </h1>
           </div>
         </div>
       </div>
       <div class="overflow-hidden flex flex-col grow md:flex-row md:w-screen">
         <div
-          class="
-            relative
-            w-screen
-            h-full
-            overflow-hidden
-            bg-gradient-to-r
-            from-zinc-400
-            grow
-            md:grow-0 md:w-1/2
-            lg:w-2/5
-          "
+          class="relative w-screen h-full overflow-hidden bg-gradient-to-r from-zinc-400 grow md:grow-0 md:w-1/2 lg:w-2/5"
         >
           <img
             class="absolute object-cover w-full h-full opacity-5"
@@ -371,23 +239,7 @@
           />
         </div>
         <div
-          class="
-            w-full
-            py-10
-            pr-4
-            font-bold
-            text-right
-            h-44
-            bg-zinc-700
-            text-zinc-400
-            md:flex
-            md:items-end
-            md:h-full
-            md:skew-x-12
-            md:origin-bottom-left
-            md:w-1/2
-            lg:w-3/5
-          "
+          class="w-full py-10 pr-4 font-bold text-right h-44 bg-zinc-700 text-zinc-400 md:flex md:items-end md:h-full md:skew-x-12 md:origin-bottom-left md:w-1/2 lg:w-3/5"
         >
           <p class="relative px-5 md:w-full md:-skew-x-12">
             <q
@@ -408,21 +260,7 @@
       >
         <!-- my work header card -->
         <div
-          class="
-            w-4/5
-            p-10
-            mt-5
-            mx-auto
-            mb-10
-            bg-green-300
-            rounded-lg
-            shadow-2xl
-            text-zinc-600
-            -rotate-3
-            md:w-[38rem]
-            lg:mt-0 lg:-rotate-2
-            
-          "
+          class="w-4/5 p-10 mt-5 mx-auto mb-10 bg-green-300 rounded-lg shadow-2xl text-zinc-600 -rotate-3 md:w-[38rem] lg:mt-0 lg:-rotate-2"
         >
           <h2 class="text-4xl font-black text-center text-zinc-600">
             My Work!
@@ -430,38 +268,14 @@
         </div>
         <!-- carousel -->
         <div
-          class="
-            w-full
-            h-[60vw]
-            mx-auto
-            lg:w-[70rem] lg:h-[35rem] lg:rounded-lg lg:overflow-hidden
-          "
+          class="w-full h-[60vw] mx-auto lg:w-[70rem] lg:h-[35rem] lg:rounded-lg lg:overflow-hidden"
         >
           <div
-            class="
-              relative
-              object-contain
-              w-full
-              h-full
-              overflow-hidden
-              text-4xl
-              mb-5
-              shadow-2xl
-            "
+            class="relative object-contain w-full h-full overflow-hidden text-4xl mb-5 shadow-2xl"
           >
             <div class="absolute z-20 w-full h-full no-slide"></div>
             <div
-              class="
-                transition-all
-                duration-[1500ms]
-                bg-white/50
-                inset-0
-                w-full
-                h-full
-                absolute
-                visible
-                translate-x-0
-              "
+              class="transition-all duration-[1500ms] bg-white/50 inset-0 w-full h-full absolute visible translate-x-0"
             >
               <img
                 class="w-full h-full object-contain"
@@ -470,18 +284,7 @@
               />
             </div>
             <div
-              class="
-                transition-all
-                duration-[1500ms]
-                bg-white/50
-                inset-0
-                w-full
-                h-full
-                absolute
-                visible
-                next
-                translate-x-full
-              "
+              class="transition-all duration-[1500ms] bg-white/50 inset-0 w-full h-full absolute visible next translate-x-full"
             >
               <img
                 class="w-full h-full object-contain"
@@ -490,17 +293,7 @@
               />
             </div>
             <div
-              class="
-                transition-all
-                duration-[1500ms]
-                bg-white/50
-                inset-0
-                w-full
-                h-full
-                absolute
-                invisible
-                -translate-x-full
-              "
+              class="transition-all duration-[1500ms] bg-white/50 inset-0 w-full h-full absolute invisible -translate-x-full"
             >
               <img
                 class="w-full h-full object-contain"
@@ -510,23 +303,7 @@
             </div>
             <div
               id="next"
-              class="
-                rounded-full
-                absolute
-                object-center
-                left-2
-                top-[calc(50%-20px)]
-                z-20
-                flex
-                items-center
-                justify-center
-                text-zinc-100/30
-                bg-zinc-700/25
-                no-slide
-                cursor-pointer
-                lg:hover:text-zinc-100
-                transition-all
-              "
+              class="rounded-full absolute object-center left-2 top-[calc(50%-20px)] z-20 flex items-center justify-center text-zinc-100/30 bg-zinc-700/25 no-slide cursor-pointer lg:hover:text-zinc-100 transition-all"
             >
               <span
                 class="iconify"
@@ -535,23 +312,7 @@
             </div>
             <div
               id="previous"
-              class="
-                rounded-full
-                absolute
-                object-center
-                right-2
-                top-[calc(50%-20px)]
-                z-20
-                flex
-                items-center
-                justify-center
-                text-zinc-100/30
-                bg-zinc-700/25
-                no-slide
-                cursor-pointer
-                lg:hover:text-zinc-100
-                transition-all
-              "
+              class="rounded-full absolute object-center right-2 top-[calc(50%-20px)] z-20 flex items-center justify-center text-zinc-100/30 bg-zinc-700/25 no-slide cursor-pointer lg:hover:text-zinc-100 transition-all"
             >
               <span
                 class="iconify"
@@ -594,19 +355,7 @@
       <section class="pt-14">
         <!-- freeCodeCamp header card -->
         <div
-          class="
-            w-4/5
-            p-10
-            mx-auto
-            mb-5
-            rounded-lg
-            shadow-2xl
-            text-zinc-600
-            bg-rose-300
-            rotate-3
-            md:w-[38rem]
-            lg:rotate-2
-          "
+          class="w-4/5 p-10 mx-auto mb-5 rounded-lg shadow-2xl text-zinc-600 bg-rose-300 rotate-3 md:w-[38rem] lg:rotate-2"
         >
           <h2 class="text-2xl font-black text-left md:text-center">
             FreeCodeCamp Projects
@@ -633,40 +382,21 @@
         <p class="px-5 pb-5 font-normal text-justify lg:w-[48rem] lg:mx-auto">
           FreeCodeCamp is where I started my web development lessons, is a good
           learning tool even for beginners that have no background knowledge of
-          coding. </p>
-          <p class="px-5 pb-16 font-normal text-justify lg:w-[48rem] lg:mx-auto">
-          The platform provides all the necessary information about
-          coding including videos, articles, and interactive coding lessons.
+          coding.
+        </p>
+        <p class="px-5 pb-16 font-normal text-justify lg:w-[48rem] lg:mx-auto">
+          The platform provides all the necessary information about coding
+          including videos, articles, and interactive coding lessons.
           freeCodeCamp is a non-profit organization that aims to help people
-          learn all the necessary coding skills. 
-          </p>
+          learn all the necessary coding skills.
+        </p>
         <!-- freeCodeCamp projects card grid -->
         <div
-          class="
-            place-items-center
-            grid grid-cols-1
-            place-content-center
-            md:grid-cols-2
-            gap-10
-            lg:grid-cols-3
-            xl:w-[80vw]
-            lg:w-[90vw] lg:mx-auto
-          "
+          class="place-items-center grid grid-cols-1 place-content-center md:grid-cols-2 gap-10 lg:grid-cols-3 xl:w-[80vw] lg:w-[90vw] lg:mx-auto"
         >
           <!-- chales darwin page card /////////////////////////////////////////////////////////////////////////-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-2
-              transition-all
-              md:rotate-2
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-2 transition-all md:rotate-2 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative h-72 overflow-hidden bg-white">
               <img
@@ -709,18 +439,7 @@
 
           <!-- Landing page card ///////////////////////////////////////////////////////////////////-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-3
-              transition-all
-              md:-rotate-3
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-3 transition-all md:-rotate-3 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -763,17 +482,7 @@
 
           <!-- Random quote machine card -->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-1
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -816,17 +525,7 @@
 
           <!-- Markdown Previewer card-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-2
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -869,18 +568,7 @@
 
           <!-- Drum Machine card-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-3
-              transition-all
-              md:rotate-3
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-3 transition-all md:rotate-3 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -923,18 +611,7 @@
 
           <!-- JavaScript Calculator card-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-1
-              transition-all
-              md:-rotate-1
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-1 transition-all md:-rotate-1 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -976,17 +653,7 @@
 
           <!-- 25 + 5 Clock card-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-1
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1026,17 +693,7 @@
 
           <!-- visualize data with a bar chart card-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-2
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1078,18 +735,7 @@
 
           <!-- Visualize Data with a Scatterplot Graph card-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-3
-              transition-all
-              md:rotate-3
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-3 transition-all md:rotate-3 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1131,18 +777,7 @@
 
           <!-- Visualize Data with a Heat Map card-->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-3
-              transition-all
-              md:-rotate-3
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-3 transition-all md:-rotate-3 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1184,17 +819,7 @@
 
           <!-- Personal Library card -->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-1
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1236,17 +861,7 @@
 
           <!-- Node.JS Authentication and Socket.IO -->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-1
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1297,18 +912,7 @@
       <section class="relative pt-14">
         <!-- frontendmentor header card ///////////////////////////////////////////////////////////// -->
         <div
-          class="
-            w-4/5
-            p-10
-            mx-auto
-            mb-5
-            rounded-lg
-            shadow-2xl
-            text-zinc-600
-            bg-blue-300
-            -rotate-2
-            md:w-[38rem]
-          "
+          class="w-4/5 p-10 mx-auto mb-5 rounded-lg shadow-2xl text-zinc-600 bg-blue-300 -rotate-2 md:w-[38rem]"
         >
           <h2 class="text-2xl font-black text-left md:text-center">
             Frontend Mentor Projects
@@ -1335,31 +939,16 @@
             experience and lot of project to your portfolio
           </p>
         </div>
-        <p class="px-5 pb-16 font-normal text-justify lg:w-[48rem] lg:mx-auto">Frontend Mentor is a platform where you can solve real-world HTML, CSS and JavaScript challenges whilst working to professional designs.</p>
+        <p class="px-5 pb-16 font-normal text-justify lg:w-[48rem] lg:mx-auto">
+          Frontend Mentor is a platform where you can solve real-world HTML, CSS
+          and JavaScript challenges whilst working to professional designs.
+        </p>
         <div
-          class="
-            place-items-center
-            grid grid-cols-1
-            gap-10
-            md:grid-cols-2
-            lg:grid-cols-3
-            xl:w-[80vw]
-            lg:w-[90vw] lg:mx-auto
-          "
+          class="place-items-center grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:w-[80vw] lg:w-[90vw] lg:mx-auto"
         >
           <!-- Order Summary Component Card -->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-1
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1401,17 +990,7 @@
 
           <!-- NFT Preview Card Component -->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-1
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1453,18 +1032,7 @@
 
           <!-- Stats preview card component solution card -->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-2
-              transition-all
-              md:-rotate-2
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-2 transition-all md:-rotate-2 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1506,18 +1074,7 @@
 
           <!-- Profile card component solution card -->
           <article
-            class="
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-1
-              transition-all
-              md:rotate-1
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-1 transition-all md:rotate-1 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1559,18 +1116,7 @@
 
           <!-- 3-column preview card component solution -->
           <article
-            class="
-              z-10
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              rotate-1
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="z-10 flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1612,18 +1158,7 @@
 
           <!-- FAQ accordion card solution -->
           <article
-            class="
-              z-10
-              flex flex-col
-              overflow-hidden
-              rounded-lg
-              shadow-xl
-              w-72
-              h-96
-              -rotate-2
-              transition-all
-              lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0
-            "
+            class="z-10 flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -1661,45 +1196,94 @@
             </div>
           </article>
           <div class="relative">
+            <a class="absolute bottom-[68px]" id="my-projects"></a>
+          </div>
+        </div>
+        <hr
+          class="border-t-8 border-t-zinc-400 mt-1 m-5 z-10 md:w-[615px] mx-auto"
+        />
+      </section>
+      <section class="relative pt-14">
+        <!-- My own projects header card ///////////////////////////////////////////////////////////// -->
+        <div
+          class="w-4/5 p-10 mx-auto mb-5 rounded-lg shadow-2xl text-zinc-600 bg-blue-300 rotate-1 md:w-[38rem]"
+        >
+          <h2 class="text-2xl font-black text-left md:text-center">
+            My Projects
+            <span class="inline iconify" data-icon="bi:code-slash"></span>
+          </h2>
+        </div>
+        <div class="p-5 font-medium mb-2 lg:w-[48rem] lg:mx-auto">
+          <p
+            class="text-justify pl-2 border-l-8 border-solid border-l-blue-300"
+          >
+            This are my own projects.
+          </p>
+        </div>
+        <p class="px-5 pb-16 font-normal text-justify lg:w-[48rem] lg:mx-auto">
+          Here you will find projects crafted by my self to add experiense to my
+          career, there are more projects I'm going to be working on and placing
+          them over here.
+        </p>
+        <div
+          class="place-items-center grid grid-cols-1 gap-10 md:grid-cols-1 lg:grid-cols-1 xl:w-[80vw] lg:w-[90vw] lg:mx-auto"
+        >
+          <!-- Counter Web App -->
+          <article
+            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+          >
+            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <img
+                class="object-cover w-full h-[26rem] -top-8 z-0 absolute"
+                src="./images/counter-web-app.png"
+                alt="Counter Web App"
+              />
+            </div>
+            <div class="bg-white z-10 p-5">
+              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+                <a
+                  class="underline"
+                  href="https://countersgo.herokuapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Pro Counter Web App
+                </a>
+              </h3>
+
+              <p class="text-center font-normal">
+                A REST web app to keep track of your counters
+              </p>
+              <p class="text-center font-semibold text-zinc-700 underline">
+                <a
+                  href="https://github.com/adrianburgoscolas/countersgo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source code
+                  <span
+                    class="inline iconify"
+                    data-icon="akar-icons:github-fill"
+                  ></span>
+                </a>
+              </p>
+            </div>
+          </article>
+          <div class="relative">
             <a class="absolute bottom-[68px]" id="about"></a>
           </div>
         </div>
         <hr
-          class="
-            border-t-8 border-t-zinc-400
-            mt-1
-            m-5
-            z-10
-            md:w-[615px]
-            mx-auto
-          "
+          class="border-t-8 border-t-zinc-400 mt-1 m-5 z-10 md:w-[615px] mx-auto"
         />
       </section>
-
       <!-- About section -->
       <section class="relative pt-10 text-zinc-700">
         <div
-          class="
-            mx-auto
-            h-auto
-            w-72
-            bg-white
-            shadow-2xl
-            rounded-lg
-            overflow-hidden
-          "
+          class="mx-auto h-auto w-72 bg-white shadow-2xl rounded-lg overflow-hidden"
         >
           <div
-            class="
-              h-44
-              flex
-              justify-center
-              items-center
-              bg-gradient-to-r
-              from-blue-500
-              to-cyan-500
-              relative
-            "
+            class="h-44 flex justify-center items-center bg-gradient-to-r from-blue-500 to-cyan-500 relative"
           >
             <img
               class="w-32 z-10 rounded-full border-8 border-white"
@@ -1736,15 +1320,7 @@
         
       </p> -->
         <ul
-          class="
-            px-5
-            pb-96
-            font-normal
-            text-justify
-            z-10
-            list-disc list-inside
-            lg:w-[48rem] lg:mx-auto
-          "
+          class="px-5 pb-96 font-normal text-justify z-10 list-disc list-inside lg:w-[48rem] lg:mx-auto"
         >
           I've been certified by freeCodeCamp in:
           <li>
@@ -1784,15 +1360,7 @@
           </li>
         </ul>
         <div
-          class="
-            absolute
-            w-full
-            h-96
-            bg-gradient-to-t
-            from-zinc-700
-            -bottom-0
-            z-0
-          "
+          class="absolute w-full h-96 bg-gradient-to-t from-zinc-700 -bottom-0 z-0"
         ></div>
         <div class="relative">
           <a class="absolute bottom-[68px]" id="contact"></a>
@@ -1800,35 +1368,16 @@
       </section>
     </main>
 
-    <footer class="p-10 w-screen h-[calc(100vh-5rem)] bg-zinc-700 min-h-[587px]">
+    <footer
+      class="p-10 w-screen h-[calc(100vh-5rem)] bg-zinc-700 min-h-[587px]"
+    >
       <div
-        class="
-          w-4/5
-          p-10
-          mt-5
-          mx-auto
-          mb-10
-          bg-zinc-400
-          rounded-lg
-          shadow-2xl
-          text-zinc-600
-          rotate-2
-          md:w-[40rem]
-        "
+        class="w-4/5 p-10 mt-5 mx-auto mb-10 bg-zinc-400 rounded-lg shadow-2xl text-zinc-600 rotate-2 md:w-[40rem]"
       >
         <h2 class="text-4xl font-black text-center text-zinc-600">Contact</h2>
       </div>
       <div
-        class="
-          pb-5
-          w-72
-          h-64
-          mx-auto
-          text-zinc-400 text-center text-2xl
-          flex flex-col
-          items-center
-          justify-around
-        "
+        class="pb-5 w-72 h-64 mx-auto text-zinc-400 text-center text-2xl flex flex-col items-center justify-around"
       >
         <a
           href="https://www.freecodecamp.org/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3"
@@ -1861,7 +1410,7 @@
         >
         <a href="mailto:adrian.burgos.colas@gmail.com"
           ><span class="inline iconify" data-icon="mdi:gmail"></span
-          ><span class="pl-2">Mail</span></a
+          ><span class="pl-2">Gmail</span></a
         >
       </div>
       <p class="pt-5 text-center text-zinc-300 text-sm">
@@ -1884,9 +1433,11 @@
         <span class="iconify" data-icon="akar-icons:html-fill"></span>
         <span class="iconify" data-icon="akar-icons:css-fill"></span>
         <span class="iconify" data-icon="akar-icons:javascript-fill"></span>
+        <span class="iconify" data-icon="simple-icons:tailwindcss"></span>
         <span class="iconify" data-icon="akar-icons:react-fill"></span>
         <span class="iconify" data-icon="bx:bxl-nodejs"></span>
-        <span class="iconify" data-icon="simple-icons:tailwindcss"></span>
+        <span class="iconify" data-icon="cib:go"></span>
+        <span class="iconify" data-icon="bi:git"></span>
         <span class="iconify" data-icon="akar-icons:github-fill"></span>
       </div>
     </footer>
