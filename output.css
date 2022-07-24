@@ -666,6 +666,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1044,6 +1054,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-left-color: rgb(147 197 253 / var(--tw-border-opacity));
 }
 
+.border-l-violet-300 {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(196 181 253 / var(--tw-border-opacity));
+}
+
 .bg-zinc-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity));
@@ -1094,6 +1109,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-zinc-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+}
+
+.bg-violet-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(196 181 253 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -1408,7 +1428,7 @@ main::after {
   background-position: center;
   opacity: 0.1;
   z-index: -1;
-  background-image: url('https://docs.google.com/uc?export=download&id=19QXkNtM-2yKUySn2dgbFw8Ne5Qu7oA9O');
+  background-image: url('./images/tile.jpg');
 }
 
 /* #main-header {
@@ -1594,6 +1614,10 @@ main::after {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1709,6 +1733,10 @@ main::after {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
