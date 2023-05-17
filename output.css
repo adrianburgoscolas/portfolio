@@ -731,6 +731,15 @@ video {
   height: -moz-fit-content;
   height: fit-content;
 }
+.h-\[20rem\] {
+  height: 20rem;
+}
+.h-\[30rem\] {
+  height: 30rem;
+}
+.h-\[13rem\] {
+  height: 13rem;
+}
 .min-h-\[580px\] {
   min-height: 580px;
 }
@@ -862,6 +871,11 @@ video {
 }
 .gap-20 {
   gap: 5rem;
+}
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 .self-start {
   align-self: flex-start;
@@ -1049,6 +1063,10 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
