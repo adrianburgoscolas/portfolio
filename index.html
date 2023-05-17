@@ -325,7 +325,7 @@
         >
           <!-- Exchange Rate Calculator -->
           <article
-            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden md:rounded-lg shadow-xl h-fit md:rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -346,8 +346,12 @@
                 </a>
               </h3>
 
-              <p class="text-center font-normal">
-                A currency rate calculator web app
+              <p class="text-justify h-fit text-sm font-normal">
+                Given the need of a tool to know the real time exchange rate from a variety of currencies, 
+                I built this Exchange Rate Calculator in three days, a web app developed with Nextjs, Typescript 
+                and conducted unit tests to ensure proper functioning. This app consume an API with a very limited 
+                number of request so I implemented a cache to reduce the number of request needed and extend the use 
+                of this tool improving the user experience of the client.
               </p>
               <p class="text-center font-semibold text-zinc-700 underline">
                 <a
@@ -366,11 +370,11 @@
           </article>
           <!-- My Task List -->
           <article
-            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-3 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:-rotate-3 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
-                  class="object-cover w-full h-72 top-0 z-0 absolute"
+                  class="object-cover w-full top-16 z-0 absolute"
                   src="./images/My_Task_List.png"
                 alt="My Task List"
               />
@@ -387,8 +391,14 @@
                 </a>
               </h3>
 
-              <p class="text-center font-normal">
-                A REST web app to keep track of your tasks
+              <p class="text-justify font-normal">
+                The client asked for a Task List app using modern techniques, the text input should be formatted so adding 
+                colors to a hash tag(#ahasgtag), user mention(@user), an email(an@email.dev) and a link(www.alink.dev). 
+                Also needed persistent storage while adding tasks and be able to edit/delete the stored tasks. I implemented
+                My Task List in 5 days, building the UI using React, Node/Express and implemented the storage with MongoDB 
+                using Atlas cloud services and conducted unit and integration tests to ensure proper functioning. I implemented a 
+                dynamic formatting behavior to the text input by adding colors as the client types and given patterns are detected 
+                adding an excellent user experience.
               </p>
               <p class="text-center font-semibold text-zinc-700 underline">
                 <a
@@ -407,11 +417,11 @@
           </article>
           <!-- Counter Web App -->
           <article
-            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-[26rem] -top-8 z-0 absolute"
+                class="object-cover w-full h-[26rem] top-0 z-0 absolute"
                 src="./images/counter-web-app.png"
                 alt="Counter Web App"
               />
@@ -428,8 +438,12 @@
                 </a>
               </h3>
 
-              <p class="text-center font-normal">
-                A REST web app to keep track of your counters
+              <p class="text-justify font-normal">
+                Counters is an app to keep track of an inventory, a user can add, modify and delete any kind of items. 
+                A user can authenticate in the app to store his inventory persistently. I built this app using React for the 
+                UI, the backend was built with Go(lang) without using any framework/library. I also implemented the authentication 
+                from scratch, to keep the session I used JWT(json web token) so the microservice can scale well to be used from a 
+                non web browser UI.
               </p>
               <p class="text-center font-semibold text-zinc-700 underline">
                 <a
@@ -448,11 +462,11 @@
           </article>
           <!-- Gateways API -->
           <article
-            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:-rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-[25rem] -top-6 z-0 absolute"
+                class="object-cover w-full h-[25rem] top-0 z-0 absolute"
                 src="./images/gateways-api.png"
                 alt="Gateways API"
               />
@@ -469,9 +483,12 @@
                 </a>
               </h3>
 
-              <p class="text-center font-normal">
-                A REST service to store gateways and associated devices
-                information
+              <p class="text-justify font-normal">
+                Given the necessity to have a register to keep track of a network devices I built Gateway API using 
+                React, Node/Express and MongoDB Atlas cloud service for the persistent storage this is a REST micro-service
+                with a simple UI so the client can use the service UI or any other UI, the client can keep track of its network 
+                gateways by adding, modifying or deleting them from a persistent storage, the client can also add several devices 
+                connected to every gateway.
               </p>
               <p class="text-center font-semibold text-zinc-700 underline">
                 <a
@@ -490,11 +507,11 @@
           </article>
           <!-- Space Launch -->
           <article
-            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-64 -top-4 z-0 absolute"
+                class="object-cover w-full h-64 top-0 z-0 absolute"
                 src="./images/Space_Launch.png"
                 alt="Space Launch"
               />
@@ -511,9 +528,10 @@
                 </a>
               </h3>
 
-              <p class="text-center font-normal">
-                Space Launch is a web app to know about upcoming rocket launches and 
-                to display specific data about each launch
+              <p class="text-justify font-normal">
+                Space Launch is a web app to know about upcoming rocket launches and to display specific data 
+                about each launch. I built this app using React and Redux, it consume the data from a public API. 
+                The UI is designed to let the client go straight forward to the data needed.
               </p>
               <p class="text-center font-semibold text-zinc-700 underline">
                 <a
@@ -532,11 +550,11 @@
           </article>
           <!-- Dsync CLI -->
           <article
-            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 -rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:-rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-64 top-0 z-0 absolute"
+                class="object-cover w-full h-64 top-4 z-0 absolute"
                 src="./images/Dsync.png"
                 alt="Dsync CLI"
               />
@@ -546,8 +564,12 @@
                   Dsync
               </h3>
 
-              <p class="text-center font-normal">
-                DSync is a CLI app to sync/backup a folder/file to Google Drive
+              <p class="text-justify font-normal">
+                One way to keep you sensitive data away from ransomware or any other kind of data loses is 
+                to backed up to a cloud storage. I built DSync, a CLI app to keep your files and folders synced 
+                to you own Google Drive storage. I built this CLI app with Go/Golang and integrated the app with Google Drive 
+                API so the user can use their own Google Storage to keep his data safe manual or automatic, the user can 
+                schedule the syncing task every amount of minutes adding a security layer to its data.
               </p>
               <p class="text-center font-semibold text-zinc-700 underline">
                 <a
@@ -566,7 +588,7 @@
           </article>
           <!-- Control Demanda -->
           <article
-            class="flex flex-col overflow-hidden rounded-lg shadow-xl w-72 h-96 rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
             <div class="relative w-full h-64 overflow-hidden bg-white">
               <img
@@ -580,8 +602,14 @@
                   Control Demanda
               </h3>
 
-              <p class="text-center font-normal">
-                A web app to monitor and control the electric power demand and parameters
+              <p class="text-justify font-normal">
+                The Cuba's Electric Power Company penalty any client having an inefficient electric power consumption by 
+                applying an extra fare ricing up its expenses. Control Demanda is a web app I'm currently working on using 
+                React, Node/Express and SQLite over a Raspberry Pi platform. The data is collected every 10 minutes from an 
+                electric network analyzer and stored in the platform, then using a system of graphics the client is aware of 
+                its electrics parameters on real time . This app can help any client to monitor and control its electric power 
+                demand and parameters so any electric power consumption deficiency can be fixed saving money to the client and 
+                been more sustainable with the environment.
               </p>
             </div>
           </article>
@@ -1487,6 +1515,7 @@
             <a
               class="underline"
               href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/responsive-web-design"
+              target="_blank"
               >Responsive Web Design</a
             >
           </li>
@@ -1494,6 +1523,7 @@
             <a
               class="underline"
               href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/javascript-algorithms-and-data-structures"
+              target="_blank"
               >JavaScript Algorithms and Data Structures</a
             >
           </li>
@@ -1501,6 +1531,7 @@
             <a
               class="underline"
               href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/front-end-development-libraries"
+              target="_blank"
               >Front End Development Libraries</a
             >
           </li>
@@ -1508,6 +1539,7 @@
             <a
               class="underline"
               href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/back-end-development-and-apis"
+              target="_blank"
               >Back End Development and APIs</a
             >
           </li>
@@ -1515,6 +1547,7 @@
             <a
               class="underline"
               href="https://www.freecodecamp.org/certification/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3/quality-assurance-v7"
+              target="_blank"
               >Quality Assurance</a
             >
           </li>
@@ -1541,6 +1574,7 @@
       >
         <a
           href="https://www.freecodecamp.org/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3"
+          target="_blank"
           ><span
             class="inline iconify"
             data-icon="simple-icons:freecodecamp"
@@ -1548,6 +1582,7 @@
           ><span class="pl-2">freeCodeCamp</span></a
         >
         <a href="https://www.frontendmentor.io/profile/adrianburgoscolas"
+          target="_blank"
           ><span
             class="inline iconify"
             data-icon="simple-icons:frontendmentor"
@@ -1555,6 +1590,7 @@
           ><span class="pl-2">Frontend Mentor</span></a
         >
         <a href="https://www.linkedin.com/in/adrian-burgos-1776a6144/"
+          target="_blank"
           ><span
             class="inline iconify"
             data-icon="akar-icons:linkedin-fill"
@@ -1562,6 +1598,7 @@
           ><span class="pl-2">LinkedIn</span></a
         >
         <a href="https://github.com/adrianburgoscolas"
+          target="_blank"
           ><span
             class="inline iconify"
             data-icon="akar-icons:github-fill"
