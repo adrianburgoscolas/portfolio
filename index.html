@@ -79,7 +79,7 @@
           class="flex flex-col w-2/3 lg:flex-row lg:items-center lg:h-20 lg:w-full"
         >
           <ul
-            class="w-full lg:backdrop-blur bg-zinc-700 lg:bg-transparent self-start divide-y px-4 flex flex-col lg:flex-row lg:items-center lg:justify-end lg:h-full"
+              class="w-full lg:backdrop-blur bg-zinc-700 lg:bg-transparent self-start divide-y lg:divide-none px-4 flex flex-col lg:flex-row lg:items-center lg:justify-end lg:h-full"
           >
             <!-- Home menu entry-->
             <li class="pt-2 ml-5 lg:p-0 lg:justify-self-start lg:grow">
@@ -154,14 +154,46 @@
             alt=""
           />
           <div
-            class="w-full h-full py-6 pr-3 text-right origin-bottom-left skew-x-12 bg-white text-zinc-500 md:p-14"
+            class="flex flex-col justify-between w-full h-full py-6 pr-3 text-right origin-bottom-left skew-x-12 bg-white text-zinc-500 md:p-14"
           >
-            <h1 class="-skew-x-12">
-              <div class="text-5xl font-black sm:text-7xl">Portfolio</div>
-              <div class="text-3xl sm:text-4xl">Adrian Burgos</div>
-              <div class="text-xl sm:text-2xl">Web Development</div>
-              <div class="text-base sm:text-xl">...a coder career</div>
+          <h1 class="-skew-x-12">
+              <div>
+                <div class="text-5xl font-black sm:text-7xl">Portfolio</div>
+                <div class="text-3xl sm:text-4xl">Adrian Burgos</div>
+                <div class="text-xl sm:text-2xl">Web Development</div>
+                <div class="text-base sm:text-xl">...a coder career</div>
+              </div>
             </h1>
+            <div class="text-2xl md:text-4xl -skew-x-12 mr-10">
+              <a href="https://twitter.com/AdrianCoder"
+                target="_blank"
+                ><span 
+                  class="inline iconify" 
+                  data-icon="mdi:twitter" 
+                ></span
+                ></a
+              >
+              <a href="https://www.linkedin.com/in/adrian-burgos-1776a6144/"
+                target="_blank"
+                ><span
+                  class="inline iconify"
+                  data-icon="akar-icons:linkedin-fill"
+                ></span
+                ></a
+              >
+              <a href="https://github.com/adrianburgoscolas"
+                target="_blank"
+                ><span
+                  class="inline iconify"
+                  data-icon="akar-icons:github-fill"
+                ></span
+                ></a
+              >
+              <a href="mailto:adrian.burgos.colas@gmail.com"
+                ><span class="inline iconify" data-icon="mdi:gmail"></span
+                ></a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -267,39 +299,41 @@
 
         <!-- My own projects header card ///////////////////////////////////////////////////////////// -->
         <div
-          class="place-items-center flex gap-20 flex-wrap justify-center xl:w-[80vw] lg:w-[90vw] lg:mx-auto"
+          class="place-items-center flex gap-12 flex-wrap justify-center xl:w-[80vw] lg:w-[90vw] lg:mx-auto"
         >
           <!-- Exchange Rate Calculator -->
           <article
-            class="flex flex-col overflow-hidden md:rounded-lg shadow-xl h-fit md:rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden bg-white shadow-xl h-fit transition-all md:h-80 md:w-[45rem] md:flex-row md:rounded-lg md:rotate-1 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
-            <div class="relative w-full h-64 overflow-hidden bg-white">
+            <div class="relative w-80 sm:w-[30rem] mx-auto h-64 md:h-full md:w-[100rem] overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-[26rem] -top-14 z-0 absolute"
+                class="object-cover w-full h-[26rem] -top-14 md:top-0 z-0 absolute"
                 src="./images/exchange.png"
                 alt="Exchange Rate Calculator"
               />
             </div>
-            <div class="bg-white z-10 p-5">
-              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
-                <a
-                  class="underline"
-                  href="https://exchangerate-git-exchangerate-adrianburgos.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Exchange Rate Calculator
-                </a>
-              </h3>
+            <div class="bg-white z-10 p-5 flex flex-col justify-between">
+              <div class="flex flex-col justify-start">
+                <h3 class="pb-2 font-bold text-center md:text-left text-zinc-700 text-xl">
+                  <a
+                      class="underline"
+                      href="https://exchangerate-git-exchangerate-adrianburgos.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >
+                      Exchange Rate Calculator
+                  </a>
+                </h3>
 
-              <p class="text-justify h-fit text-sm font-normal">
+                <p class="text-justify md:text-left h-fit text-sm font-normal">
                 Given the need of a tool to know the real time exchange rate from a variety of currencies, 
                 I built this Exchange Rate Calculator in three days, a web app developed with Nextjs, Typescript 
                 and conducted unit tests to ensure proper functioning. This app consume an API with a very limited 
                 number of request so I implemented a cache to reduce the number of request needed and extend the use 
                 of this tool improving the user experience of the client.
-              </p>
-              <p class="text-center font-semibold text-zinc-700 underline">
+                </p>
+              </div>
+              <p class="text-center md:text-left font-semibold text-zinc-700 underline">
                 <a
                   href="https://github.com/adrianburgoscolas/exchangerate"
                   target="_blank"
@@ -316,28 +350,29 @@
           </article>
           <!-- My Task List -->
           <article
-            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:-rotate-3 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden bg-white shadow-xl h-fit transition-all md:h-80 md:w-[45rem] md:flex-row md:rounded-lg md:-rotate-3 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
-            <div class="relative w-full h-64 overflow-hidden bg-white">
+            <div class="relative w-80 sm:w-[30rem] mx-auto h-64 md:h-full md:w-[140rem] overflow-hidden bg-white">
               <img
-                  class="object-cover w-full top-16 z-0 absolute"
+                  class="object-cover w-full h-[26rem] top-16 z-0 absolute"
                   src="./images/My_Task_List.png"
                 alt="My Task List"
               />
             </div>
-            <div class="bg-white z-10 p-5">
-              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
-                <a
-                  class="underline"
-                  href="https://task-list-xspi.onrender.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  My Task List
-                </a>
-              </h3>
+            <div class="bg-white z-10 p-5 flex flex-col justify-between">
+              <div class="flex flex-col justify-start">
+                <h3 class="pb-2 font-bold text-center md:text-left text-zinc-700 text-xl">
+                  <a
+                      class="underline"
+                      href="https://task-list-xspi.onrender.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >
+                      My Task List
+                  </a>
+                </h3>
 
-              <p class="text-justify font-normal">
+                <p class="text-justify md:text-left h-fit text-sm font-normal">
                 The client asked for a Task List app using modern techniques, the text input should be formatted so adding 
                 colors to a hash tag(#ahasgtag), user mention(@user), an email(an@email.dev) and a link(www.alink.dev). 
                 Also needed persistent storage while adding tasks and be able to edit/delete the stored tasks. I implemented
@@ -345,8 +380,9 @@
                 using Atlas cloud services and conducted unit and integration tests to ensure proper functioning. I implemented a 
                 dynamic formatting behavior to the text input by adding colors as the client types and given patterns are detected 
                 adding an excellent user experience.
-              </p>
-              <p class="text-center font-semibold text-zinc-700 underline">
+                </p>
+              </div>
+              <p class="text-center md:text-left font-semibold text-zinc-700 underline">
                 <a
                   href="https://github.com/adrianburgoscolas/mytasklist"
                   target="_blank"
@@ -363,35 +399,37 @@
           </article>
           <!-- Counter Web App -->
           <article
-            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden h-fit bg-white md:h-80 md:w-[45rem] md:flex-row md:rounded-lg md:-rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
-            <div class="relative w-full h-64 overflow-hidden bg-white">
+            <div class="relative w-80 sm:w-[30rem] mx-auto h-64 md:h-full md:w-[120rem] overflow-hidden">
               <img
-                class="object-cover w-full top-0 z-0 absolute"
+                class="object-cover h-[50rem] w-full -top-2 sm:top-0 z-0 absolute"
                 src="./images/counter-web-app.png"
                 alt="Pro Counter Web App"
               />
             </div>
-            <div class="bg-white z-10 p-5">
-              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
-                <a
-                  class="underline"
-                  href="https://countersgo.onrender.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Pro Counter Web App
-                </a>
-              </h3>
+            <div class="bg-white z-10 p-5 flex flex-col justify-between">
+              <div class="flex flex-col justify-start">
+                <h3 class="pb-2 font-bold text-center md:text-left text-zinc-700 text-xl">
+                  <a
+                      class="underline"
+                      href="https://countersgo.onrender.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >
+                      Pro Counter Web App
+                  </a>
+                </h3>
 
-              <p class="text-justify font-normal">
+                <p class="text-justify md:text-left h-fit text-sm font-normal">
                 Pro Counter is an app to keep track of an inventory, a user can add, modify and delete any kind of items. 
                 A user can authenticate in the app to store his inventory persistently. I built this app using React for the 
                 UI, the backend was built with Go(lang) without using any framework/library. I also implemented the authentication 
                 from scratch, to keep the session I used JWT(json web token) so the microservice can scale well to be used from a 
                 non web browser UI.
-              </p>
-              <p class="text-center font-semibold text-zinc-700 underline">
+                </p>
+              </div>
+              <p class="text-center md:text-left font-semibold text-zinc-700 underline">
                 <a
                   href="https://github.com/adrianburgoscolas/countersgo"
                   target="_blank"
@@ -408,35 +446,37 @@
           </article>
           <!-- Gateways API -->
           <article
-            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:-rotate-1 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="bg-white flex flex-col overflow-hidden shadow-xl h-fit transition-all md:h-80 md:w-[45rem] md:flex-row md:rounded-lg md:rotate-1 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
-            <div class="relative w-full h-64 overflow-hidden bg-white">
+              <div class="relative w-80 sm:w-[30rem] mx-auto h-64 md:h-full md:w-[100rem] overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-[25rem] top-0 z-0 absolute"
+                class="object-cover w-full h-[30rem] top-0 sm:top-8 z-0 absolute"
                 src="./images/gateways-api.png"
                 alt="Gateways API"
               />
             </div>
-            <div class="bg-white z-10 p-5">
-              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
-                <a
-                  class="underline"
-                  href="https://gatewaysfront.onrender.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Gateways API
-                </a>
-              </h3>
+            <div class="bg-white z-10 p-5 flex flex-col justify-between">
+              <div class="flex flex-col justify-start">
+                <h3 class="pb-2 font-bold text-center md:text-left text-zinc-700 text-xl">
+                  <a
+                      class="underline"
+                      href="https://gatewaysfront.onrender.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >
+                      Gateways API
+                  </a>
+                </h3>
 
-              <p class="text-justify font-normal">
+                <p class="text-justify md:text-left h-fit text-sm font-normal">
                 Given the necessity to have a register to keep track of a network devices I built Gateway API using 
                 React, Node/Express and MongoDB Atlas cloud service for the persistent storage this is a REST micro-service
                 with a simple UI so the client can use the service UI or any other UI, the client can keep track of its network 
                 gateways by adding, modifying or deleting them from a persistent storage, the client can also add several devices 
                 connected to every gateway.
-              </p>
-              <p class="text-center font-semibold text-zinc-700 underline">
+                </p>
+              </div>
+              <p class="text-center md:text-left font-semibold text-zinc-700 underline">
                 <a
                   href="https://github.com/adrianburgoscolas/gateways"
                   target="_blank"
@@ -453,33 +493,35 @@
           </article>
           <!-- Space Launch -->
           <article
-            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden shadow-xl h-fit transition-all bg-white md:h-80 md:w-[45rem] md:flex-row md:rounded-lg md:rotate-2 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
-            <div class="relative w-full h-64 overflow-hidden bg-white">
+            <div class="relative w-80 sm:w-[30rem] mx-auto h-64 md:h-full md:w-[60rem] overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-64 top-0 z-0 absolute"
+                class="object-cover w-full h-[26rem] -top-4 md:top-0 z-0 absolute"
                 src="./images/Space_Launch.png"
                 alt="Space Launch"
               />
             </div>
-            <div class="bg-white z-10 p-5">
-              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
-                <a
-                  class="underline"
-                  href="https://space-launch-rosy.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Space Launch
-                </a>
-              </h3>
+            <div class="bg-white z-10 p-5 flex flex-col justify-between">
+              <div class="flex flex-col justify-start">
+                <h3 class="pb-2 font-bold text-center md:text-left text-zinc-700 text-xl">
+                  <a
+                      class="underline"
+                      href="https://space-launch-rosy.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >
+                      Space Launch
+                  </a>
+                </h3>
 
-              <p class="text-justify font-normal">
+                <p class="text-justify md:text-left h-fit text-sm font-normal">
                 Space Launch is a web app to know about upcoming rocket launches and to display specific data 
                 about each launch. I built this app using React and Redux, it consume the data from a public API. 
                 The UI is designed to let the client go straight forward to the data needed.
-              </p>
-              <p class="text-center font-semibold text-zinc-700 underline">
+                </p>
+              </div>
+              <p class="text-center md:text-left font-semibold text-zinc-700 underline">
                 <a
                   href="https://github.com/adrianburgoscolas/space-launch"
                   target="_blank"
@@ -496,28 +538,30 @@
           </article>
           <!-- Dsync CLI -->
           <article
-            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:-rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden shadow-xl h-fit transition-all bg-white md:h-80 md:w-[45rem] md:flex-row md:rounded-lg md:-rotate-2 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
-            <div class="relative w-full h-64 overflow-hidden bg-white">
+            <div class="relative w-80 sm:w-[30rem] mx-auto h-64 md:h-full md:w-[100rem] overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-64 top-4 z-0 absolute"
+                class="object-cover w-full h-[26rem] -top-4 md:top-0 z-0 absolute"
                 src="./images/Dsync.png"
                 alt="Dsync CLI"
               />
             </div>
-            <div class="bg-white z-10 p-5">
-              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+            <div class="bg-white z-10 p-5 flex flex-col justify-between">
+              <div class="flex flex-col justify-start">
+                <h3 class="pb-2 font-bold text-center md:text-left text-zinc-700 text-xl">
                   Dsync
-              </h3>
+                </h3>
 
-              <p class="text-justify font-normal">
+                <p class="text-justify md:text-left h-fit text-sm font-normal">
                 One way to keep you sensitive data away from ransomware or any other kind of data loses is 
                 to backed up to a cloud storage. I built DSync, a CLI app to keep your files and folders synced 
                 to you own Google Drive storage. I built this CLI app with Go/Golang and integrated the app with Google Drive 
                 API so the user can use their own Google Storage to keep his data safe manual or automatic, the user can 
                 schedule the syncing task every amount of minutes adding a security layer to its data.
-              </p>
-              <p class="text-center font-semibold text-zinc-700 underline">
+                </p>
+              </div>
+              <p class="text-center md:text-left font-semibold text-zinc-700 underline">
                 <a
                   href="https://github.com/adrianburgoscolas/dsync"
                   target="_blank"
@@ -534,21 +578,22 @@
           </article>
           <!-- Control Demanda -->
           <article
-            class="flex flex-col overflow-hidden lg:rounded-lg shadow-xl h-fit lg:rotate-2 transition-all lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
+            class="flex flex-col overflow-hidden shadow-xl h-fit transition-all bg-white md:h-80 md:w-[45rem] md:flex-row md:rounded-lg md:rotate-2 lg:hover:scale-[1.1] lg:hover:shadow-2xl lg:hover:rotate-0"
           >
-            <div class="relative w-full h-64 overflow-hidden bg-white">
+            <div class="relative w-80 sm:w-[30rem] mx-auto h-64 md:h-full md:w-[140rem] overflow-hidden bg-white">
               <img
-                class="object-cover w-full h-64 top-0 z-0 absolute"
+                class="object-cover w-full h-[26rem] -top-2 md:top-0 z-0 absolute"
                 src="./images/Control_Demanda.png"
                 alt="Control Demanda"
               />
             </div>
-            <div class="bg-white z-10 p-5">
-              <h3 class="pb-5 font-bold text-center text-zinc-700 text-xl">
+            <div class="bg-white z-10 p-5 flex flex-col justify-between">
+              <div class="flex flex-col justify-start">
+                <h3 class="pb-2 font-bold text-center md:text-left text-zinc-700 text-xl">
                   Control Demanda
-              </h3>
+                </h3>
 
-              <p class="text-justify font-normal">
+                <p class="text-justify md:text-left h-fit text-sm font-normal">
                 The Cuba's Electric Power Company penalty any client having an inefficient electric power consumption by 
                 applying an extra fare ricing up its expenses. Control Demanda is a web app I'm currently working on using 
                 React, Node/Express and SQLite over a Raspberry Pi platform. The data is collected every 10 minutes from an 
@@ -556,7 +601,8 @@
                 its electrics parameters on real time . This app can help any client to monitor and control its electric power 
                 demand and parameters so any electric power consumption deficiency can be fixed saving money to the client and 
                 been more sustainable with the environment.
-              </p>
+                </p>
+              </div>
             </div>
           </article>
         </div>
@@ -671,22 +717,14 @@
       <div
         class="pb-5 w-72 h-64 mx-auto text-zinc-400 text-center text-2xl flex flex-col items-center justify-around"
       >
-        <a
-          href="https://www.freecodecamp.org/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3"
+        <a href="https://twitter.com/AdrianCoder"
           target="_blank"
-          ><span
-            class="inline iconify"
-            data-icon="simple-icons:freecodecamp"
+          ><span 
+            class="inline iconify" 
+            data-icon="mdi:twitter" 
+            style="color: #a1a1aa;"
           ></span
-          ><span class="pl-2">freeCodeCamp</span></a
-        >
-        <a href="https://www.frontendmentor.io/profile/adrianburgoscolas"
-          target="_blank"
-          ><span
-            class="inline iconify"
-            data-icon="simple-icons:frontendmentor"
-          ></span
-          ><span class="pl-2">Frontend Mentor</span></a
+          ><span class="pl-2">Twitter</span></a
         >
         <a href="https://www.linkedin.com/in/adrian-burgos-1776a6144/"
           target="_blank"
@@ -707,6 +745,23 @@
         <a href="mailto:adrian.burgos.colas@gmail.com"
           ><span class="inline iconify" data-icon="mdi:gmail"></span
           ><span class="pl-2">Gmail</span></a
+        >
+        <a
+          href="https://www.freecodecamp.org/fcce3ec214d-b0f9-4ddc-b526-34aea3d1e4a3"
+          target="_blank"
+          ><span
+            class="inline iconify"
+            data-icon="simple-icons:freecodecamp"
+          ></span
+          ><span class="pl-2">freeCodeCamp</span></a
+        >
+        <a href="https://www.frontendmentor.io/profile/adrianburgoscolas"
+          target="_blank"
+          ><span
+            class="inline iconify"
+            data-icon="simple-icons:frontendmentor"
+          ></span
+          ><span class="pl-2">Frontend Mentor</span></a
         >
       </div>
       <p class="pt-5 text-center text-zinc-300 text-sm">
